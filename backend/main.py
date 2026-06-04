@@ -1,6 +1,6 @@
-"""TimeWarp FastAPI application — REST endpoints + WebSocket live stream.
+"""TimeWarp FastAPI application - REST endpoints + WebSocket live stream.
 
-REST API Contract (frozen — from AGENTS.md):
+REST API Contract (frozen - from AGENTS.md):
   GET  /checkpoints?run_id={uuid}
   GET  /replay/{timestamp_ns}?run_id={uuid}
   GET  /anomaly/path?run_id={uuid}      ← Phase 2 stub
@@ -24,8 +24,11 @@ from fastapi import BackgroundTasks, FastAPI, HTTPException, WebSocket, WebSocke
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend import supabase_client
-from backend import snapshot_engine
+from backend.anomaly_graph import BehaviorDAG
+from backend.drift_detector import get_drift_detector
 from backend.models import BranchRequest, StateSnapshot
+from backend.models import Checkpoint
+from backend.replay_engine import PersistentSegmentTree
 from backend.websocket_manager import WebSocketManager
 
 load_dotenv(override=True)
@@ -35,7 +38,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Shared WebSocket manager — single instance for the process lifetime
+# Shared WebSocket manager - single instance for the process lifetime
 ws_manager = WebSocketManager()
 
 
@@ -46,7 +49,9 @@ async def lifespan(app: FastAPI):
     if ok:
         logger.info("✅ Supabase connected")
     else:
-        logger.error("❌ Supabase connection FAILED — check .env SUPABASE_URL / SUPABASE_KEY")
+        logger.error("❌ Supabase connection FAILED - check .env SUPABASE_URL / SUPABASE_KEY")
+    get_drift_detector()
+    logger.info("Drift detector model loaded")
     yield
     logger.info("TimeWarp shutting down")
 
@@ -83,20 +88,30 @@ async def get_checkpoints(run_id: UUID):
 async def replay_at_time(timestamp_ns: int, run_id: UUID):
     """Reconstruct the full agent state at any historical timestamp."""
     try:
-        checkpoints = await supabase_client.get_checkpoints_in_range(
-            run_id, 0, timestamp_ns
-        )
+        checkpoints = await supabase_client.get_checkpoints_for_run(run_id)
         if not checkpoints:
+            raise HTTPException(
+                status_code=404,
+                detail=f"No checkpoints found for run {run_id}",
+            )
+        checkpoint_models = [Checkpoint.model_validate(row) for row in checkpoints]
+        replay_tree = PersistentSegmentTree()
+        for checkpoint in checkpoint_models:
+            replay_tree.insert(checkpoint)
+        reconstructed = replay_tree.get_state_at(timestamp_ns, checkpoint_models)
+        checkpoints_applied = len(
+            [cp for cp in checkpoint_models if cp.timestamp_ns <= timestamp_ns]
+        )
+        if not reconstructed:
             raise HTTPException(
                 status_code=404,
                 detail=f"No checkpoints found before timestamp {timestamp_ns}",
             )
-        reconstructed = snapshot_engine.reconstruct_state(checkpoints)
         return StateSnapshot(
             run_id=run_id,
             timestamp_ns=timestamp_ns,
             reconstructed_state=reconstructed,
-            checkpoints_applied=len(checkpoints),
+            checkpoints_applied=checkpoints_applied,
         ).model_dump(mode="json")
     except HTTPException:
         raise
@@ -106,12 +121,27 @@ async def replay_at_time(timestamp_ns: int, run_id: UUID):
 
 @app.get("/anomaly/path", summary="Bellman-Ford root-cause path (Phase 2)")
 async def get_anomaly_path(run_id: UUID):
-    """Return the Bellman-Ford anomaly path. Phase 2 — stub for Phase 1."""
-    return {
-        "run_id": str(run_id),
-        "anomaly_path": [],
-        "message": "Anomaly detection coming in Phase 2",
-    }
+    """Return the Bellman-Ford anomaly path for run_id."""
+    try:
+        checkpoints = await supabase_client.get_checkpoints_for_run(run_id)
+        graph = BehaviorDAG()
+        for row in checkpoints:
+            checkpoint = Checkpoint.model_validate(row)
+            drift_score = (
+                checkpoint.drift_score
+                if checkpoint.drift_score is not None
+                else 1.0
+            )
+            graph.add_node(checkpoint, drift_score)
+
+        anomaly_path = graph.get_anomaly_path(run_id)
+        return {
+            "run_id": str(run_id),
+            "anomaly_path": anomaly_path,
+            "anomaly_nodes": graph.get_node_names(anomaly_path),
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @app.post("/branch", summary="Create an alternate timeline with a modified prompt")
@@ -125,6 +155,7 @@ async def create_branch(request: BranchRequest, background_tasks: BackgroundTask
         branch_run_id,
         ws_manager,
         injected_prompt=request.new_prompt,
+        inject_at_node=request.node_name,
         branch_id=request.run_id,
     )
     logger.info(
@@ -163,7 +194,7 @@ async def start_run(background_tasks: BackgroundTasks):
 
 @app.websocket("/ws/live")
 async def websocket_endpoint(websocket: WebSocket):
-    """Real-time checkpoint stream — connect once, receive all events."""
+    """Real-time checkpoint stream - connect once, receive all events."""
     await ws_manager.connect(websocket)
     try:
         while True:

@@ -1,6 +1,6 @@
 """Async Supabase interface for TimeWarp checkpoint storage.
 
-All public functions are async — they wrap the sync supabase-py client
+All public functions are async - they wrap the sync supabase-py client
 in asyncio.to_thread so the FastAPI event loop is never blocked.
 All calls are wrapped in try/except with specific error messages.
 """
@@ -89,7 +89,7 @@ async def get_checkpoints_for_run(run_id: UUID) -> list[dict]:
 async def get_checkpoints_in_range(
     run_id: UUID, start_ns: int, end_ns: int
 ) -> list[dict]:
-    """Checkpoints in [start_ns, end_ns] range — used by the segment tree replay."""
+    """Checkpoints in [start_ns, end_ns] range - used by the segment tree replay."""
     try:
         client = _get_client()
         result = await asyncio.to_thread(
@@ -162,6 +162,48 @@ async def insert_embedding(checkpoint_id: UUID, embedding: list[float]) -> None:
         logger.debug(f"Inserted embedding for checkpoint {checkpoint_id}")
     except Exception as e:
         logger.error(f"insert_embedding failed for checkpoint {checkpoint_id}: {e}")
+        raise
+
+
+async def insert_baseline_embedding(node_name: str, embedding: list[float]) -> None:
+    """Store a baseline embedding sample for a node."""
+    try:
+        client = _get_client()
+        data = {
+            "node_name": node_name,
+            "embedding": embedding,
+        }
+        await asyncio.to_thread(
+            lambda: client.table("baseline_embeddings").insert(data).execute()
+        )
+        logger.debug(f"Inserted baseline embedding for node {node_name}")
+    except Exception as e:
+        logger.error(f"insert_baseline_embedding failed for node {node_name}: {e}")
+        raise
+
+
+async def update_checkpoint_drift(
+    checkpoint_id: UUID, drift_score: float, is_anomaly: bool
+) -> None:
+    """Persist drift score and anomaly flag onto an existing checkpoint row."""
+    try:
+        client = _get_client()
+        data = {
+            "drift_score": drift_score,
+            "is_anomaly": is_anomaly,
+        }
+        await asyncio.to_thread(
+            lambda: client.table("checkpoints")
+            .update(data)
+            .eq("id", str(checkpoint_id))
+            .execute()
+        )
+        logger.debug(
+            f"Updated drift for checkpoint {checkpoint_id}: "
+            f"score={drift_score:.3f} anomaly={is_anomaly}"
+        )
+    except Exception as e:
+        logger.error(f"update_checkpoint_drift failed for checkpoint {checkpoint_id}: {e}")
         raise
 
 

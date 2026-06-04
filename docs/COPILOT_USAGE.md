@@ -1,9 +1,9 @@
 # GitHub Copilot & AI-Assisted Build Log
-## TimeWarp — NYTechWeek Hackathon, June 4, 2026
+## TimeWarp - NYTechWeek Hackathon, June 4, 2026
 
-**Hackathon Category:** GitHub Copilot Usage & AI-assisted build — **25 points**
+**Hackathon Category:** GitHub Copilot Usage & AI-assisted build - **25 points**
 **Requirement:** Document every AI prompt used. Screenshot as you go. Full marks realistic.
-**Tool Used:** Claude Code (Anthropic) — AI pair programmer equivalent to GitHub Copilot
+**Tool Used:** Claude Code (Anthropic) - AI pair programmer equivalent to GitHub Copilot
 
 ---
 
@@ -11,7 +11,7 @@
 
 This document logs every AI-assisted interaction in building TimeWarp. Every file in this
 project was generated, reviewed, or improved with AI assistance. The AI acted as a
-co-engineer throughout — not just autocomplete, but full architectural thinking, code
+co-engineer throughout - not just autocomplete, but full architectural thinking, code
 generation, debugging, and decision-making.
 
 **Total AI interactions logged:** See sessions below
@@ -20,13 +20,13 @@ generation, debugging, and decision-making.
 
 ---
 
-## Session 1 — Project Setup & Pre-Hackathon Planning
+## Session 1 - Project Setup & Pre-Hackathon Planning
 **Date:** June 4, 2026 (pre-hackathon)
 **Tool:** Claude Code (Sonnet 4.6)
 
 ### Prompts Used
 
-#### Prompt 1.1 — Project Discovery
+#### Prompt 1.1 - Project Discovery
 ```
 Can you access my projects folder?
 ```
@@ -37,7 +37,7 @@ implementation-plan.md, .env.example).
 
 ---
 
-#### Prompt 1.2 — Name + Pre-Steps Planning
+#### Prompt 1.2 - Name + Pre-Steps Planning
 ```
 We are in a hackathon of 4 hours. Read all files in timewrap directory.
 Think of a good name if timewrap is not good. Create a repo in my GitHub,
@@ -48,7 +48,7 @@ project. Create one more database. Complete all pre steps and then stop.
 - Read all 6 planning documents
 - Checked GitHub auth status (`gh auth status`)
 - Listed Supabase projects (`supabase projects list`)
-- Checked Azure CLI (not installed — flagged)
+- Checked Azure CLI (not installed - flagged)
 - Confirmed Python 3.12, Node 22 available
 - Recommended keeping name "TimeWarp" (already excellent)
 - Identified that `timewrap_` file prefixes needed cleanup
@@ -60,7 +60,7 @@ project. Create one more database. Complete all pre steps and then stop.
 
 ---
 
-#### Prompt 1.3 — Execute Pre-Steps (Phase 0)
+#### Prompt 1.3 - Execute Pre-Steps (Phase 0)
 ```
 proceed with pre steps, if it is phase 0 I believe
 ```
@@ -91,22 +91,22 @@ AI fixed: Changed pin to `httpx>=0.26,<0.28`.
 
 ---
 
-## Session 2 — Phase 1: Backend Core
+## Session 2 - Phase 1: Backend Core
 **Date:** June 4, 2026
 **Tool:** Claude Code (Sonnet 4.6)
 
 ### Prompts Used
 
-#### Prompt 2.1 — Phase 1 Start
+#### Prompt 2.1 - Phase 1 Start
 ```
 I have filled in API_key in .env. Can you proceed with Phase 1.
 ```
 **AI Action:** Verified Anthropic key loads correctly (`load_dotenv(override=True)` needed
-because shell env had stale empty value — AI caught and fixed this).
+because shell env had stale empty value - AI caught and fixed this).
 
 ---
 
-#### Prompt 2.2 — Full Backend Build
+#### Prompt 2.2 - Full Backend Build
 *[AI proceeded autonomously after permission was granted for Phase 1]*
 
 **AI-Generated Files (complete, production-quality):**
@@ -118,7 +118,7 @@ because shell env had stale empty value — AI caught and fixed this).
 | `backend/supabase_client.py` | 183 | Async Supabase client, 7 functions, all with try/except |
 | `backend/snapshot_engine.py` | 122 | compute_delta, compute_hash (SHA-256 chain), reconstruct_state, snapshot_node_execution |
 | `backend/websocket_manager.py` | 52 | WebSocketManager: connect/disconnect/broadcast with dead-connection pruning |
-| `backend/instrumentation.py` | 100 | TimeWarpMiddleware.wrap_node() — async node wrapper |
+| `backend/instrumentation.py` | 100 | TimeWarpMiddleware.wrap_node() - async node wrapper |
 | `backend/main.py` | 176 | FastAPI app, 7 endpoints, CORS, lifespan startup check |
 | `agent_demo/__init__.py` | 0 | Package init |
 | `agent_demo/demo_agent.py` | 214 | 5-node LangGraph agent (plan→search→analyze→synthesize→format) |
@@ -131,25 +131,25 @@ because shell env had stale empty value — AI caught and fixed this).
 
 ---
 
-#### Prompt 2.3 — Bug Fix: Anthropic Model 404
+#### Prompt 2.3 - Bug Fix: Anthropic Model 404
 *[AI identified issue during verification run]*
 
-**Issue:** `claude-3-5-haiku-20241022` returned 404 — model retired as of June 2026.
+**Issue:** `claude-3-5-haiku-20241022` returned 404 - model retired as of June 2026.
 
 **AI Fix:**
 - Upgraded `anthropic` SDK from `0.40.0` → `0.105.2`
 - Changed model to `claude-haiku-4-5`
 - Updated `requirements.txt` to `anthropic>=0.105.0`
 
-**AI Prompt (internal):** None needed — AI caught error from logs and fixed autonomously.
+**AI Prompt (internal):** None needed - AI caught error from logs and fixed autonomously.
 
 ---
 
-#### Prompt 2.4 — Bug Fix: Test Failure
+#### Prompt 2.4 - Bug Fix: Test Failure
 *[AI identified during test run]*
 
 **Issue:** `test_lossless_roundtrip_two_checkpoints` FAILED.
-Root cause: `search_results` is a list — DeepDiff uses `iterable_item_added` not
+Root cause: `search_results` is a list - DeepDiff uses `iterable_item_added` not
 `dictionary_item_added`, causing lists to not appear in delta.
 
 **AI Fix:** Rewrote `compute_delta` to use direct top-level key comparison instead of
@@ -170,7 +170,7 @@ for key in set(prev_state.keys()) | set(curr_state.keys()):
 
 ---
 
-#### Prompt 2.5 — Phase 1 Verification
+#### Prompt 2.5 - Phase 1 Verification
 *[AI ran full stack verification]*
 
 **AI Actions:**
@@ -196,11 +196,11 @@ Each with correct delta_keys and SHA-256 chained hashes.
 
 ---
 
-## Session 3 — Documentation & Handoff Prep
+## Session 3 - Documentation & Handoff Prep
 **Date:** June 4, 2026
 **Tool:** Claude Code (Sonnet 4.6)
 
-#### Prompt 3.1 — Codex Handoff Request
+#### Prompt 3.1 - Codex Handoff Request
 ```
 If I need to transfer from here to codex.. can it be possible?
 Draft all the information in the files and then write a prompt what all
@@ -212,14 +212,50 @@ and Codex prompt template.
 
 ---
 
-#### Prompt 3.2 — Copilot Usage Tracking
+#### Prompt 3.2 - Copilot Usage Tracking
 ```
-GitHub Copilot usage & AI-assisted build — 25 pts. You are building the
+GitHub Copilot usage & AI-assisted build - 25 pts. You are building the
 entire thing with Copilot. Document every prompt you use. Screenshot as
 you go. Full marks realistic.
 ```
 **AI Action:** Created this document (`docs/COPILOT_USAGE.md`) with complete
 AI interaction log.
+
+---
+
+## Session 4 - Phase 2: Algorithms
+**Date:** June 4, 2026
+**Tool:** Codex (GPT-5)
+
+#### Prompt 4.1 - Phase 2 Handoff Readiness
+```
+Read the documents and code so far done.. and graphify,, to understnad what has been done so far..
+
+If you have any doubts ask me.. Once you are ready to start doing for Phase 2, let me know
+```
+**AI Action:** Read `CODEX_HANDOFF.md`, `CLAUDE.md`, `AGENTS.md`,
+`graphify-out/GRAPH_REPORT.md`, `docs/plans/implementation-plan.md`, backend source,
+demo agent, and tests. Verified dependencies, started FastAPI, checked `/runs`, ran
+the Phase 1 test suite, and confirmed readiness.
+
+#### Prompt 4.2 - Phase 2 Implementation Start
+```
+Proceed to Phase 2
+```
+**AI Action:** Implemented Phase 2 with test-first coverage:
+- Added `tests/test_replay_engine.py`, `tests/test_drift_detector.py`, and
+  `tests/test_anomaly_graph.py`
+- Created `backend/replay_engine.py` with `PersistentSegmentTree`
+- Created `backend/drift_detector.py` with one-time `SentenceTransformer` model loading
+- Created `backend/anomaly_graph.py` with `BehaviorDAG` and Bellman-Ford path search
+- Created `agent_demo/inject_failure.py` for node-specific poison prompt runs
+- Updated `backend/instrumentation.py` to snapshot, score drift, update the anomaly graph,
+  persist drift fields, and broadcast WebSocket anomaly status
+- Updated `backend/main.py` to use replay engine and return DB-backed anomaly paths
+- Added Supabase helpers for baseline embeddings and checkpoint drift updates
+
+**Verification:** Phase 2 milestone passed with the real transformer model: clean run,
+poisoned run at `analyze_results`, non-empty `/anomaly/path`, and `18/18` tests passing.
 
 ---
 
@@ -231,7 +267,7 @@ AI interaction log.
 |---|---|---|---|
 | Phase 0 | 6 config/schema files | ~150 | .gitignore, requirements.txt, package.json, supabase_schema.sql, .env template, CLAUDE.md update |
 | Phase 1 | 13 Python files | ~1,073 | Complete backend stack from scratch |
-| Phase 2 | 3 algorithm files (pending) | ~400 est. | replay_engine, drift_detector, anomaly_graph |
+| Phase 2 | 7 algorithm/test files | ~700 est. | replay_engine, drift_detector, anomaly_graph, injection CLI, integration wiring |
 | Phase 3 | 5 frontend files (pending) | ~600 est. | Three.js 3D scene, D3 scrubber, WebSocket client |
 | Phase 4 | 1 deploy config (pending) | ~30 est. | azure-deploy.yml |
 
@@ -297,11 +333,11 @@ For full 25-pt documentation, capture screenshots of:
 | Criterion | Evidence | Points |
 |---|---|---|
 | AI used throughout build | Every file AI-generated or AI-reviewed | ✅ |
-| Prompts documented | This document — every prompt logged | ✅ |
+| Prompts documented | This document - every prompt logged | ✅ |
 | Non-trivial AI usage | Architecture decisions, bug fixes, not just autocomplete | ✅ |
 | AI caught bugs | httpx conflict, DeepDiff list issue, retired model | ✅ |
 | Tests AI-generated | 13 tests in test_snapshot_engine.py | ✅ |
 | AI-generated code passes tests | 13/13 passing | ✅ |
 | Commit co-authorship | All commits have Co-Authored-By: Claude Sonnet 4.6 | ✅ |
 
-**Estimated score: 25/25** — Full marks achievable with screenshot evidence.
+**Estimated score: 25/25** - Full marks achievable with screenshot evidence.
