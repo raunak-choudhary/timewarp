@@ -3,7 +3,7 @@ uvicorn[standard]==0.31.0
 websockets==13.1
 supabase==2.9.0
 langgraph==0.2.50
-anthropic==0.40.0
+anthropic>=0.105.0
 sentence-transformers==3.3.1
 torch==2.5.1
 pydantic==2.10.0
