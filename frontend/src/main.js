@@ -7,6 +7,7 @@ import { TimeWarpSocket } from "./websocket.js";
 const apiBase = getApiBase();
 const runSelector = document.querySelector("#run-selector");
 const refreshButton = document.querySelector("#refresh-runs");
+const exitFocusButton = document.querySelector("#exit-focus");
 const startRunButton = document.querySelector("#start-run");
 const injectFailureButton = document.querySelector("#inject-failure");
 const connectionStatus = document.querySelector("#connection-status");
@@ -30,6 +31,7 @@ let selectedState = {};
 const timeline = new TimeWarpTimeline(document.querySelector("#timeline-root"), {
   onSelect: (checkpoint) => selectCheckpoint(checkpoint),
 });
+globalThis.__timewarpTimeline = timeline;
 
 const replayController = new ReplayController({
   timeline,
@@ -60,6 +62,7 @@ const socket = new TimeWarpSocket({
 });
 
 refreshButton.addEventListener("click", () => loadRuns());
+exitFocusButton.addEventListener("click", () => timeline.exitFocus());
 runSelector.addEventListener("change", () => loadRun(runSelector.value));
 startRunButton.addEventListener("click", async () => {
   const result = await startRun(apiBase);

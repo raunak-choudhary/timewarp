@@ -290,6 +290,30 @@ D3 scrubber, anomaly path, and working rewind from `format_output` to `analyze_r
 
 ---
 
+#### Prompt 5.2 - Phase 3 UI Redesign and 3D Focus Mode
+```
+Proceed with recommended options and fix the frontend
+```
+**AI Action:** Redesigned the frontend around the approved recommendation: keep Three.js,
+avoid a React migration during the hackathon sprint, and borrow shadcn-style compact
+surface polish in vanilla CSS.
+- Added bounded arc layout math so long runs stay inside a fixed 3D visual rail
+- Added camera fit and node focus poses with tests
+- Replaced the grid-heavy scene shell with subtle orbital rail geometry
+- Added click-to-focus behavior that zooms into a solid checkpoint node
+- Added a node history chamber with orbiting panels for input, drift, status, and time
+- Added Exit Node control to return from chamber focus to the full run
+- Fixed edge rebuilding so lines are regenerated after node relayout
+- Improved responsive layout after browser verification showed the scene could shrink too far
+- Added browser-visible debug state for verifying projected bounds and focus mode behavior
+
+**Verification:** `npm test` passed with `14/14` frontend tests, `npm run build` passed,
+browser verification showed a live WebSocket connection, and projected node bounds stayed
+inside frame. Focus mode showed one selected node with 5 chamber objects, and Exit Node
+restored all 5 run nodes.
+
+---
+
 ## AI Assistance Summary
 
 ### By Phase
@@ -299,7 +323,7 @@ D3 scrubber, anomaly path, and working rewind from `format_output` to `analyze_r
 | Phase 0 | 6 config/schema files | ~150 | .gitignore, requirements.txt, package.json, supabase_schema.sql, .env template, CLAUDE.md update |
 | Phase 1 | 13 Python files | ~1,073 | Complete backend stack from scratch |
 | Phase 2 | 7 algorithm/test files | ~700 est. | replay_engine, drift_detector, anomaly_graph, injection CLI, integration wiring |
-| Phase 3 | 10 frontend/test files | ~900 est. | Three.js timeline, D3 scrubber, WebSocket client, replay controls, branch panel |
+| Phase 3 | 10 frontend/test files | ~1,100 est. | Three.js timeline, D3 scrubber, WebSocket client, replay controls, branch panel, focus chamber |
 | Phase 4 | 1 deploy config (pending) | ~30 est. | azure-deploy.yml |
 
 ### AI Capabilities Demonstrated

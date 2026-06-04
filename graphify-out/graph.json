@@ -112,7 +112,7 @@
       "source_file": "frontend/tests/replay_controls.test.mjs",
       "source_location": "L1",
       "id": "frontend_tests_replay_controls_test_mjs",
-      "community": 14,
+      "community": 15,
       "norm_label": "replay_controls.test.mjs"
     },
     {
@@ -121,7 +121,7 @@
       "source_file": "frontend/tests/websocket.test.mjs",
       "source_location": "L1",
       "id": "frontend_tests_websocket_test_mjs",
-      "community": 15,
+      "community": 16,
       "norm_label": "websocket.test.mjs"
     },
     {
@@ -130,7 +130,7 @@
       "source_file": "frontend/tests/timeline.test.mjs",
       "source_location": "L1",
       "id": "frontend_tests_timeline_test_mjs",
-      "community": 16,
+      "community": 17,
       "norm_label": "timeline.test.mjs"
     },
     {
@@ -139,7 +139,7 @@
       "source_file": "frontend/tests/diff_view.test.mjs",
       "source_location": "L1",
       "id": "frontend_tests_diff_view_test_mjs",
-      "community": 17,
+      "community": 18,
       "norm_label": "diff_view.test.mjs"
     },
     {
@@ -148,7 +148,7 @@
       "source_file": "frontend/src/replay_controls.js",
       "source_location": "L1",
       "id": "frontend_src_replay_controls_js",
-      "community": 10,
+      "community": 11,
       "norm_label": "replay_controls.js"
     },
     {
@@ -157,7 +157,7 @@
       "source_file": "frontend/src/replay_controls.js",
       "source_location": "L1",
       "id": "replay_controls_clamptimestamp",
-      "community": 10,
+      "community": 11,
       "norm_label": "clamptimestamp()"
     },
     {
@@ -166,7 +166,7 @@
       "source_file": "frontend/src/replay_controls.js",
       "source_location": "L5",
       "id": "replay_controls_createreplayrequesturl",
-      "community": 10,
+      "community": 11,
       "norm_label": "createreplayrequesturl()"
     },
     {
@@ -175,7 +175,7 @@
       "source_file": "frontend/src/replay_controls.js",
       "source_location": "L10",
       "id": "replay_controls_shouldshowbranchbutton",
-      "community": 3,
+      "community": 7,
       "norm_label": "shouldshowbranchbutton()"
     },
     {
@@ -184,7 +184,7 @@
       "source_file": "frontend/src/replay_controls.js",
       "source_location": "L14",
       "id": "replay_controls_replaycontroller",
-      "community": 10,
+      "community": 11,
       "norm_label": "replaycontroller"
     },
     {
@@ -193,7 +193,7 @@
       "source_file": "frontend/src/replay_controls.js",
       "source_location": "L15",
       "id": "replay_controls_replaycontroller_constructor",
-      "community": 10,
+      "community": 11,
       "norm_label": ".constructor()"
     },
     {
@@ -202,7 +202,7 @@
       "source_file": "frontend/src/replay_controls.js",
       "source_location": "L23",
       "id": "replay_controls_replaycontroller_scrubto",
-      "community": 10,
+      "community": 11,
       "norm_label": ".scrubto()"
     },
     {
@@ -211,7 +211,7 @@
       "source_file": "frontend/src/replay_controls.js",
       "source_location": "L33",
       "id": "replay_controls_replaycontroller_play",
-      "community": 10,
+      "community": 11,
       "norm_label": ".play()"
     },
     {
@@ -220,7 +220,7 @@
       "source_file": "frontend/src/replay_controls.js",
       "source_location": "L49",
       "id": "replay_controls_replaycontroller_pause",
-      "community": 10,
+      "community": 11,
       "norm_label": ".pause()"
     },
     {
@@ -229,7 +229,7 @@
       "source_file": "frontend/src/replay_controls.js",
       "source_location": "L54",
       "id": "replay_controls_replaycontroller_toggle",
-      "community": 10,
+      "community": 11,
       "norm_label": ".toggle()"
     },
     {
@@ -245,7 +245,7 @@
       "label": "normalizeCheckpoint()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L15",
+      "source_location": "L16",
       "id": "timeline_normalizecheckpoint",
       "community": 3,
       "norm_label": "normalizecheckpoint()"
@@ -254,7 +254,7 @@
       "label": "statusFromCheckpoint()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L27",
+      "source_location": "L28",
       "id": "timeline_statusfromcheckpoint",
       "community": 3,
       "norm_label": "statusfromcheckpoint()"
@@ -263,16 +263,16 @@
       "label": "buildTimelineState()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L43",
+      "source_location": "L44",
       "id": "timeline_buildtimelinestate",
-      "community": 3,
+      "community": 7,
       "norm_label": "buildtimelinestate()"
     },
     {
       "label": "visibleCheckpointIdsAt()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L52",
+      "source_location": "L53",
       "id": "timeline_visiblecheckpointidsat",
       "community": 3,
       "norm_label": "visiblecheckpointidsat()"
@@ -281,16 +281,43 @@
       "label": "formatRelativeTime()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L60",
+      "source_location": "L61",
       "id": "timeline_formatrelativetime",
-      "community": 3,
+      "community": 7,
       "norm_label": "formatrelativetime()"
+    },
+    {
+      "label": "calculateBoundedNodeLayout()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L69",
+      "id": "timeline_calculateboundednodelayout",
+      "community": 3,
+      "norm_label": "calculateboundednodelayout()"
+    },
+    {
+      "label": "getFitCameraPose()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L86",
+      "id": "timeline_getfitcamerapose",
+      "community": 3,
+      "norm_label": "getfitcamerapose()"
+    },
+    {
+      "label": "getFocusCameraPose()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L95",
+      "id": "timeline_getfocuscamerapose",
+      "community": 3,
+      "norm_label": "getfocuscamerapose()"
     },
     {
       "label": "TimeWarpTimeline",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L68",
+      "source_location": "L110",
       "id": "timeline_timewarptimeline",
       "community": 3,
       "norm_label": "timewarptimeline"
@@ -299,7 +326,7 @@
       "label": ".constructor()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L69",
+      "source_location": "L111",
       "id": "timeline_timewarptimeline_constructor",
       "community": 3,
       "norm_label": ".constructor()"
@@ -308,7 +335,7 @@
       "label": ".initScene()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L79",
+      "source_location": "L132",
       "id": "timeline_timewarptimeline_initscene",
       "community": 3,
       "norm_label": ".initscene()"
@@ -317,7 +344,7 @@
       "label": ".setCheckpoints()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L108",
+      "source_location": "L164",
       "id": "timeline_timewarptimeline_setcheckpoints",
       "community": 3,
       "norm_label": ".setcheckpoints()"
@@ -326,7 +353,7 @@
       "label": ".addNode()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L119",
+      "source_location": "L177",
       "id": "timeline_timewarptimeline_addnode",
       "community": 3,
       "norm_label": ".addnode()"
@@ -335,16 +362,25 @@
       "label": ".addEdge()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L154",
+      "source_location": "L212",
       "id": "timeline_timewarptimeline_addedge",
       "community": 3,
       "norm_label": ".addedge()"
     },
     {
+      "label": ".clearEdges()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L231",
+      "id": "timeline_timewarptimeline_clearedges",
+      "community": 3,
+      "norm_label": ".clearedges()"
+    },
+    {
       "label": ".updateNodeColor()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L171",
+      "source_location": "L240",
       "id": "timeline_timewarptimeline_updatenodecolor",
       "community": 3,
       "norm_label": ".updatenodecolor()"
@@ -353,7 +389,7 @@
       "label": ".rewindToTime()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L183",
+      "source_location": "L252",
       "id": "timeline_timewarptimeline_rewindtotime",
       "community": 3,
       "norm_label": ".rewindtotime()"
@@ -362,16 +398,52 @@
       "label": ".highlightAnomalyPath()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L198",
+      "source_location": "L268",
       "id": "timeline_timewarptimeline_highlightanomalypath",
-      "community": 3,
+      "community": 7,
       "norm_label": ".highlightanomalypath()"
+    },
+    {
+      "label": ".focusNode()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L286",
+      "id": "timeline_timewarptimeline_focusnode",
+      "community": 3,
+      "norm_label": ".focusnode()"
+    },
+    {
+      "label": ".exitFocus()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L300",
+      "id": "timeline_timewarptimeline_exitfocus",
+      "community": 3,
+      "norm_label": ".exitfocus()"
+    },
+    {
+      "label": ".fitToRun()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L307",
+      "id": "timeline_timewarptimeline_fittorun",
+      "community": 3,
+      "norm_label": ".fittorun()"
+    },
+    {
+      "label": ".setCameraPose()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L311",
+      "id": "timeline_timewarptimeline_setcamerapose",
+      "community": 3,
+      "norm_label": ".setcamerapose()"
     },
     {
       "label": ".clear()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L216",
+      "source_location": "L318",
       "id": "timeline_timewarptimeline_clear",
       "community": 3,
       "norm_label": ".clear()"
@@ -380,25 +452,43 @@
       "label": ".rebuildEdges()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L231",
+      "source_location": "L335",
       "id": "timeline_timewarptimeline_rebuildedges",
       "community": 3,
       "norm_label": ".rebuildedges()"
     },
     {
-      "label": ".stableJitter()",
+      "label": ".relayoutNodes()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L241",
-      "id": "timeline_timewarptimeline_stablejitter",
+      "source_location": "L346",
+      "id": "timeline_timewarptimeline_relayoutnodes",
       "community": 3,
-      "norm_label": ".stablejitter()"
+      "norm_label": ".relayoutnodes()"
+    },
+    {
+      "label": ".showFocusOnly()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L362",
+      "id": "timeline_timewarptimeline_showfocusonly",
+      "community": 3,
+      "norm_label": ".showfocusonly()"
+    },
+    {
+      "label": ".showFullRun()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L374",
+      "id": "timeline_timewarptimeline_showfullrun",
+      "community": 3,
+      "norm_label": ".showfullrun()"
     },
     {
       "label": ".resize()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L249",
+      "source_location": "L386",
       "id": "timeline_timewarptimeline_resize",
       "community": 3,
       "norm_label": ".resize()"
@@ -407,18 +497,99 @@
       "label": ".animate()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L260",
+      "source_location": "L397",
       "id": "timeline_timewarptimeline_animate",
       "community": 3,
       "norm_label": ".animate()"
     },
     {
+      "label": ".handlePointerDown()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L437",
+      "id": "timeline_timewarptimeline_handlepointerdown",
+      "community": 3,
+      "norm_label": ".handlepointerdown()"
+    },
+    {
+      "label": ".addSceneShell()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L453",
+      "id": "timeline_timewarptimeline_addsceneshell",
+      "community": 3,
+      "norm_label": ".addsceneshell()"
+    },
+    {
+      "label": ".addNodeHalo()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L471",
+      "id": "timeline_timewarptimeline_addnodehalo",
+      "community": 3,
+      "norm_label": ".addnodehalo()"
+    },
+    {
+      "label": ".showNodeChamber()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L487",
+      "id": "timeline_timewarptimeline_shownodechamber",
+      "community": 3,
+      "norm_label": ".shownodechamber()"
+    },
+    {
+      "label": ".createPanelSprite()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L530",
+      "id": "timeline_timewarptimeline_createpanelsprite",
+      "community": 3,
+      "norm_label": ".createpanelsprite()"
+    },
+    {
+      "label": ".wrapCanvasText()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L553",
+      "id": "timeline_timewarptimeline_wrapcanvastext",
+      "community": 3,
+      "norm_label": ".wrapcanvastext()"
+    },
+    {
+      "label": ".clearNodeChamber()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L573",
+      "id": "timeline_timewarptimeline_clearnodechamber",
+      "community": 3,
+      "norm_label": ".clearnodechamber()"
+    },
+    {
+      "label": ".getDebugState()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L588",
+      "id": "timeline_timewarptimeline_getdebugstate",
+      "community": 3,
+      "norm_label": ".getdebugstate()"
+    },
+    {
+      "label": ".publishDebugState()",
+      "file_type": "code",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L631",
+      "id": "timeline_timewarptimeline_publishdebugstate",
+      "community": 3,
+      "norm_label": ".publishdebugstate()"
+    },
+    {
       "label": "renderScrubber()",
       "file_type": "code",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L276",
+      "source_location": "L640",
       "id": "timeline_renderscrubber",
-      "community": 3,
+      "community": 7,
       "norm_label": "renderscrubber()"
     },
     {
@@ -427,70 +598,70 @@
       "source_file": "frontend/src/main.js",
       "source_location": "L1",
       "id": "frontend_src_main_js",
-      "community": 3,
+      "community": 7,
       "norm_label": "main.js"
     },
     {
       "label": "bootstrap()",
       "file_type": "code",
       "source_file": "frontend/src/main.js",
-      "source_location": "L98",
+      "source_location": "L101",
       "id": "main_bootstrap",
-      "community": 3,
+      "community": 7,
       "norm_label": "bootstrap()"
     },
     {
       "label": "loadRuns()",
       "file_type": "code",
       "source_file": "frontend/src/main.js",
-      "source_location": "L104",
+      "source_location": "L107",
       "id": "main_loadruns",
-      "community": 3,
+      "community": 7,
       "norm_label": "loadruns()"
     },
     {
       "label": "loadRun()",
       "file_type": "code",
       "source_file": "frontend/src/main.js",
-      "source_location": "L124",
+      "source_location": "L127",
       "id": "main_loadrun",
-      "community": 3,
+      "community": 7,
       "norm_label": "loadrun()"
     },
     {
       "label": "selectCheckpoint()",
       "file_type": "code",
       "source_file": "frontend/src/main.js",
-      "source_location": "L145",
+      "source_location": "L148",
       "id": "main_selectcheckpoint",
-      "community": 3,
+      "community": 7,
       "norm_label": "selectcheckpoint()"
     },
     {
       "label": "updateReplayState()",
       "file_type": "code",
       "source_file": "frontend/src/main.js",
-      "source_location": "L160",
+      "source_location": "L163",
       "id": "main_updatereplaystate",
-      "community": 3,
+      "community": 7,
       "norm_label": "updatereplaystate()"
     },
     {
       "label": "updateAnomalyPath()",
       "file_type": "code",
       "source_file": "frontend/src/main.js",
-      "source_location": "L173",
+      "source_location": "L176",
       "id": "main_updateanomalypath",
-      "community": 3,
+      "community": 7,
       "norm_label": "updateanomalypath()"
     },
     {
       "label": "updateBranchButton()",
       "file_type": "code",
       "source_file": "frontend/src/main.js",
-      "source_location": "L183",
+      "source_location": "L186",
       "id": "main_updatebranchbutton",
-      "community": 3,
+      "community": 7,
       "norm_label": "updatebranchbutton()"
     },
     {
@@ -499,7 +670,7 @@
       "source_file": "frontend/src/websocket.js",
       "source_location": "L1",
       "id": "frontend_src_websocket_js",
-      "community": 8,
+      "community": 9,
       "norm_label": "websocket.js"
     },
     {
@@ -508,7 +679,7 @@
       "source_file": "frontend/src/websocket.js",
       "source_location": "L1",
       "id": "websocket_buildwebsocketurl",
-      "community": 8,
+      "community": 9,
       "norm_label": "buildwebsocketurl()"
     },
     {
@@ -526,7 +697,7 @@
       "source_file": "frontend/src/websocket.js",
       "source_location": "L22",
       "id": "websocket_timewarpsocket",
-      "community": 8,
+      "community": 9,
       "norm_label": "timewarpsocket"
     },
     {
@@ -535,7 +706,7 @@
       "source_file": "frontend/src/websocket.js",
       "source_location": "L23",
       "id": "websocket_timewarpsocket_constructor",
-      "community": 8,
+      "community": 9,
       "norm_label": ".constructor()"
     },
     {
@@ -544,7 +715,7 @@
       "source_file": "frontend/src/websocket.js",
       "source_location": "L31",
       "id": "websocket_timewarpsocket_connect",
-      "community": 8,
+      "community": 9,
       "norm_label": ".connect()"
     },
     {
@@ -553,7 +724,7 @@
       "source_file": "frontend/src/websocket.js",
       "source_location": "L59",
       "id": "websocket_timewarpsocket_disconnect",
-      "community": 8,
+      "community": 9,
       "norm_label": ".disconnect()"
     },
     {
@@ -562,7 +733,7 @@
       "source_file": "frontend/src/api.js",
       "source_location": "L1",
       "id": "frontend_src_api_js",
-      "community": 3,
+      "community": 7,
       "norm_label": "api.js"
     },
     {
@@ -571,7 +742,7 @@
       "source_file": "frontend/src/api.js",
       "source_location": "L1",
       "id": "api_getapibase",
-      "community": 3,
+      "community": 7,
       "norm_label": "getapibase()"
     },
     {
@@ -580,7 +751,7 @@
       "source_file": "frontend/src/api.js",
       "source_location": "L15",
       "id": "api_fetchjson",
-      "community": 3,
+      "community": 7,
       "norm_label": "fetchjson()"
     },
     {
@@ -589,7 +760,7 @@
       "source_file": "frontend/src/api.js",
       "source_location": "L27",
       "id": "api_listruns",
-      "community": 3,
+      "community": 7,
       "norm_label": "listruns()"
     },
     {
@@ -598,7 +769,7 @@
       "source_file": "frontend/src/api.js",
       "source_location": "L31",
       "id": "api_getcheckpoints",
-      "community": 3,
+      "community": 7,
       "norm_label": "getcheckpoints()"
     },
     {
@@ -607,7 +778,7 @@
       "source_file": "frontend/src/api.js",
       "source_location": "L35",
       "id": "api_getanomalypath",
-      "community": 3,
+      "community": 7,
       "norm_label": "getanomalypath()"
     },
     {
@@ -616,7 +787,7 @@
       "source_file": "frontend/src/api.js",
       "source_location": "L39",
       "id": "api_startrun",
-      "community": 3,
+      "community": 7,
       "norm_label": "startrun()"
     },
     {
@@ -625,7 +796,7 @@
       "source_file": "frontend/src/api.js",
       "source_location": "L43",
       "id": "api_replayat",
-      "community": 3,
+      "community": 7,
       "norm_label": "replayat()"
     },
     {
@@ -634,7 +805,7 @@
       "source_file": "frontend/src/diff_view.js",
       "source_location": "L1",
       "id": "frontend_src_diff_view_js",
-      "community": 8,
+      "community": 9,
       "norm_label": "diff_view.js"
     },
     {
@@ -643,7 +814,7 @@
       "source_file": "frontend/src/diff_view.js",
       "source_location": "L1",
       "id": "diff_view_extractpromptfromstate",
-      "community": 8,
+      "community": 9,
       "norm_label": "extractpromptfromstate()"
     },
     {
@@ -652,7 +823,7 @@
       "source_file": "frontend/src/diff_view.js",
       "source_location": "L8",
       "id": "diff_view_buildbranchpayload",
-      "community": 8,
+      "community": 9,
       "norm_label": "buildbranchpayload()"
     },
     {
@@ -661,7 +832,7 @@
       "source_file": "frontend/src/diff_view.js",
       "source_location": "L17",
       "id": "diff_view_diffview",
-      "community": 8,
+      "community": 9,
       "norm_label": "diffview"
     },
     {
@@ -670,7 +841,7 @@
       "source_file": "frontend/src/diff_view.js",
       "source_location": "L18",
       "id": "diff_view_diffview_constructor",
-      "community": 8,
+      "community": 9,
       "norm_label": ".constructor()"
     },
     {
@@ -679,7 +850,7 @@
       "source_file": "frontend/src/diff_view.js",
       "source_location": "L30",
       "id": "diff_view_diffview_open",
-      "community": 8,
+      "community": 9,
       "norm_label": ".open()"
     },
     {
@@ -688,7 +859,7 @@
       "source_file": "frontend/src/diff_view.js",
       "source_location": "L39",
       "id": "diff_view_diffview_close",
-      "community": 8,
+      "community": 9,
       "norm_label": ".close()"
     },
     {
@@ -697,7 +868,7 @@
       "source_file": "frontend/src/diff_view.js",
       "source_location": "L44",
       "id": "diff_view_diffview_createbranch",
-      "community": 8,
+      "community": 9,
       "norm_label": ".createbranch()"
     },
     {
@@ -710,7 +881,7 @@
       "author": null,
       "contributor": null,
       "id": "conftest_run_id_fixture",
-      "community": 18,
+      "community": 19,
       "norm_label": "run_id fixture"
     },
     {
@@ -723,7 +894,7 @@
       "author": null,
       "contributor": null,
       "id": "conftest_sample_state_v1",
-      "community": 12,
+      "community": 13,
       "norm_label": "sample_state_v1 fixture"
     },
     {
@@ -736,7 +907,7 @@
       "author": null,
       "contributor": null,
       "id": "conftest_sample_state_v2",
-      "community": 12,
+      "community": 13,
       "norm_label": "sample_state_v2 fixture"
     },
     {
@@ -749,7 +920,7 @@
       "author": null,
       "contributor": null,
       "id": "test_snapshot_engine_testcomputedelta",
-      "community": 4,
+      "community": 0,
       "norm_label": "testcomputedelta"
     },
     {
@@ -762,7 +933,7 @@
       "author": null,
       "contributor": null,
       "id": "test_snapshot_engine_testcomputehash",
-      "community": 4,
+      "community": 0,
       "norm_label": "testcomputehash"
     },
     {
@@ -775,7 +946,7 @@
       "author": null,
       "contributor": null,
       "id": "test_snapshot_engine_testreconstructstate",
-      "community": 12,
+      "community": 13,
       "norm_label": "testreconstructstate"
     },
     {
@@ -784,7 +955,7 @@
       "source_file": "tests/__init__.py",
       "source_location": "L1",
       "id": "tests_init_py",
-      "community": 19,
+      "community": 20,
       "norm_label": "__init__.py"
     },
     {
@@ -793,7 +964,7 @@
       "source_file": "tests/test_drift_detector.py",
       "source_location": "L1",
       "id": "tests_test_drift_detector_py",
-      "community": 5,
+      "community": 6,
       "norm_label": "test_drift_detector.py"
     },
     {
@@ -802,7 +973,7 @@
       "source_file": "tests/test_drift_detector.py",
       "source_location": "L7",
       "id": "test_drift_detector_test_cosine_similarity_detects_opposite_vectors",
-      "community": 5,
+      "community": 6,
       "norm_label": "test_cosine_similarity_detects_opposite_vectors()"
     },
     {
@@ -811,7 +982,7 @@
       "source_file": "tests/test_drift_detector.py",
       "source_location": "L14",
       "id": "test_drift_detector_test_semantically_divergent_strings_score_below_threshold",
-      "community": 5,
+      "community": 6,
       "norm_label": "test_semantically_divergent_strings_score_below_threshold()"
     },
     {
@@ -819,7 +990,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_drift_detector.py",
       "source_location": "L1",
-      "community": 5,
+      "community": 6,
       "norm_label": "tests for backend/drift_detector.py - phase 2 semantic drift scoring.",
       "id": "test_drift_detector_rationale_1"
     },
@@ -828,7 +999,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_drift_detector.py",
       "source_location": "L8",
-      "community": 5,
+      "community": 6,
       "norm_label": "manual cosine similarity returns a low score for divergent vectors.",
       "id": "test_drift_detector_rationale_8"
     },
@@ -837,7 +1008,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_drift_detector.py",
       "source_location": "L15",
-      "community": 5,
+      "community": 6,
       "norm_label": "sentence embeddings put unrelated strings below the anomaly threshold.",
       "id": "test_drift_detector_rationale_15"
     },
@@ -847,7 +1018,7 @@
       "source_file": "tests/test_replay_engine.py",
       "source_location": "L1",
       "id": "tests_test_replay_engine_py",
-      "community": 4,
+      "community": 0,
       "norm_label": "test_replay_engine.py"
     },
     {
@@ -856,7 +1027,7 @@
       "source_file": "tests/test_replay_engine.py",
       "source_location": "L11",
       "id": "test_replay_engine_checkpoint",
-      "community": 4,
+      "community": 0,
       "norm_label": "_checkpoint()"
     },
     {
@@ -865,7 +1036,7 @@
       "source_file": "tests/test_replay_engine.py",
       "source_location": "L33",
       "id": "test_replay_engine_test_query_returns_checkpoint_at_or_before_arbitrary_timestamp",
-      "community": 4,
+      "community": 0,
       "norm_label": "test_query_returns_checkpoint_at_or_before_arbitrary_timestamp()"
     },
     {
@@ -874,7 +1045,7 @@
       "source_file": "tests/test_replay_engine.py",
       "source_location": "L68",
       "id": "test_replay_engine_test_get_state_at_reconstructs_state_at_nearest_checkpoint",
-      "community": 4,
+      "community": 0,
       "norm_label": "test_get_state_at_reconstructs_state_at_nearest_checkpoint()"
     },
     {
@@ -882,7 +1053,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_replay_engine.py",
       "source_location": "L1",
-      "community": 4,
+      "community": 0,
       "norm_label": "tests for backend/replay_engine.py - phase 2 replay queries.",
       "id": "test_replay_engine_rationale_1"
     },
@@ -891,7 +1062,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_replay_engine.py",
       "source_location": "L34",
-      "community": 4,
+      "community": 0,
       "norm_label": "segment tree queries return the nearest historical checkpoint at or before t.",
       "id": "test_replay_engine_rationale_34"
     },
@@ -900,7 +1071,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_replay_engine.py",
       "source_location": "L69",
-      "community": 4,
+      "community": 0,
       "norm_label": "replay reconstructs the state as of the nearest checkpoint at or before t.",
       "id": "test_replay_engine_rationale_69"
     },
@@ -910,7 +1081,7 @@
       "source_file": "tests/test_anomaly_graph.py",
       "source_location": "L1",
       "id": "tests_test_anomaly_graph_py",
-      "community": 2,
+      "community": 5,
       "norm_label": "test_anomaly_graph.py"
     },
     {
@@ -919,7 +1090,7 @@
       "source_file": "tests/test_anomaly_graph.py",
       "source_location": "L10",
       "id": "test_anomaly_graph_checkpoint",
-      "community": 2,
+      "community": 5,
       "norm_label": "_checkpoint()"
     },
     {
@@ -928,7 +1099,7 @@
       "source_file": "tests/test_anomaly_graph.py",
       "source_location": "L22",
       "id": "test_anomaly_graph_test_bellman_ford_path_ends_at_injected_failure_node",
-      "community": 2,
+      "community": 5,
       "norm_label": "test_bellman_ford_path_ends_at_injected_failure_node()"
     },
     {
@@ -936,7 +1107,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_anomaly_graph.py",
       "source_location": "L1",
-      "community": 2,
+      "community": 5,
       "norm_label": "tests for backend/anomaly_graph.py - phase 2 bellman-ford anomaly paths.",
       "id": "test_anomaly_graph_rationale_1"
     },
@@ -945,7 +1116,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_anomaly_graph.py",
       "source_location": "L23",
-      "community": 2,
+      "community": 5,
       "norm_label": "the anomaly path traces the chain ending at the first anomalous node.",
       "id": "test_anomaly_graph_rationale_23"
     },
@@ -955,7 +1126,7 @@
       "source_file": "backend/instrumentation.py",
       "source_location": "L1",
       "id": "backend_instrumentation_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "instrumentation.py"
     },
     {
@@ -964,7 +1135,7 @@
       "source_file": "backend/instrumentation.py",
       "source_location": "L28",
       "id": "instrumentation_timewarpmiddleware",
-      "community": 1,
+      "community": 2,
       "norm_label": "timewarpmiddleware"
     },
     {
@@ -982,7 +1153,7 @@
       "source_file": "backend/instrumentation.py",
       "source_location": "L46",
       "id": "instrumentation_timewarpmiddleware_wrap_node",
-      "community": 1,
+      "community": 2,
       "norm_label": ".wrap_node()"
     },
     {
@@ -991,7 +1162,7 @@
       "source_file": "backend/instrumentation.py",
       "source_location": "L145",
       "id": "instrumentation_timewarpmiddleware_extract_output_text",
-      "community": 1,
+      "community": 2,
       "norm_label": "._extract_output_text()"
     },
     {
@@ -999,7 +1170,7 @@
       "file_type": "rationale",
       "source_file": "backend/instrumentation.py",
       "source_location": "L1",
-      "community": 1,
+      "community": 2,
       "norm_label": "timewarp langgraph instrumentation middleware.  wraps every agent node function",
       "id": "instrumentation_rationale_1"
     },
@@ -1008,7 +1179,7 @@
       "file_type": "rationale",
       "source_file": "backend/instrumentation.py",
       "source_location": "L29",
-      "community": 1,
+      "community": 2,
       "norm_label": "stateful middleware instance for one agent run.",
       "id": "instrumentation_rationale_29"
     },
@@ -1017,7 +1188,7 @@
       "file_type": "rationale",
       "source_file": "backend/instrumentation.py",
       "source_location": "L47",
-      "community": 1,
+      "community": 2,
       "norm_label": "return an async-wrapped version of node_fn with timewarp instrumentation.",
       "id": "instrumentation_rationale_47"
     },
@@ -1026,7 +1197,7 @@
       "file_type": "rationale",
       "source_file": "backend/instrumentation.py",
       "source_location": "L146",
-      "community": 1,
+      "community": 2,
       "norm_label": "convert node output into stable text for embedding.",
       "id": "instrumentation_rationale_146"
     },
@@ -1040,7 +1211,7 @@
       "author": null,
       "contributor": null,
       "id": "models_checkpoint",
-      "community": 4,
+      "community": 0,
       "norm_label": "checkpoint"
     },
     {
@@ -1053,7 +1224,7 @@
       "author": null,
       "contributor": null,
       "id": "models_statesnapshot",
-      "community": 2,
+      "community": 4,
       "norm_label": "statesnapshot"
     },
     {
@@ -1066,7 +1237,7 @@
       "author": null,
       "contributor": null,
       "id": "models_driftevent",
-      "community": 5,
+      "community": 6,
       "norm_label": "driftevent"
     },
     {
@@ -1079,7 +1250,7 @@
       "author": null,
       "contributor": null,
       "id": "models_branchrequest",
-      "community": 2,
+      "community": 4,
       "norm_label": "branchrequest"
     },
     {
@@ -1092,7 +1263,7 @@
       "author": null,
       "contributor": null,
       "id": "models_websocketmessage",
-      "community": 1,
+      "community": 2,
       "norm_label": "websocketmessage"
     },
     {
@@ -1101,7 +1272,7 @@
       "source_file": "backend/drift_detector.py",
       "source_location": "L1",
       "id": "backend_drift_detector_py",
-      "community": 5,
+      "community": 6,
       "norm_label": "drift_detector.py"
     },
     {
@@ -1110,7 +1281,7 @@
       "source_file": "backend/drift_detector.py",
       "source_location": "L23",
       "id": "drift_detector_driftdetector",
-      "community": 5,
+      "community": 6,
       "norm_label": "driftdetector"
     },
     {
@@ -1119,7 +1290,7 @@
       "source_file": "backend/drift_detector.py",
       "source_location": "L26",
       "id": "drift_detector_driftdetector_init",
-      "community": 5,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -1128,7 +1299,7 @@
       "source_file": "backend/drift_detector.py",
       "source_location": "L42",
       "id": "drift_detector_driftdetector_embed",
-      "community": 5,
+      "community": 6,
       "norm_label": ".embed()"
     },
     {
@@ -1137,7 +1308,7 @@
       "source_file": "backend/drift_detector.py",
       "source_location": "L49",
       "id": "drift_detector_driftdetector_cosine_similarity",
-      "community": 5,
+      "community": 6,
       "norm_label": ".cosine_similarity()"
     },
     {
@@ -1146,7 +1317,7 @@
       "source_file": "backend/drift_detector.py",
       "source_location": "L61",
       "id": "drift_detector_driftdetector_score",
-      "community": 5,
+      "community": 6,
       "norm_label": ".score()"
     },
     {
@@ -1155,7 +1326,7 @@
       "source_file": "backend/drift_detector.py",
       "source_location": "L107",
       "id": "drift_detector_driftdetector_update_baseline",
-      "community": 5,
+      "community": 6,
       "norm_label": ".update_baseline()"
     },
     {
@@ -1164,7 +1335,7 @@
       "source_file": "backend/drift_detector.py",
       "source_location": "L117",
       "id": "drift_detector_driftdetector_coerce_embedding",
-      "community": 5,
+      "community": 6,
       "norm_label": "._coerce_embedding()"
     },
     {
@@ -1173,7 +1344,7 @@
       "source_file": "backend/drift_detector.py",
       "source_location": "L130",
       "id": "drift_detector_get_drift_detector",
-      "community": 5,
+      "community": 6,
       "norm_label": "get_drift_detector()"
     },
     {
@@ -1181,7 +1352,7 @@
       "file_type": "rationale",
       "source_file": "backend/drift_detector.py",
       "source_location": "L1",
-      "community": 5,
+      "community": 6,
       "norm_label": "transformer embedding drift detector for timewarp checkpoints.",
       "id": "drift_detector_rationale_1"
     },
@@ -1190,7 +1361,7 @@
       "file_type": "rationale",
       "source_file": "backend/drift_detector.py",
       "source_location": "L24",
-      "community": 5,
+      "community": 6,
       "norm_label": "scores node output against baseline semantic embeddings.",
       "id": "drift_detector_rationale_24"
     },
@@ -1199,7 +1370,7 @@
       "file_type": "rationale",
       "source_file": "backend/drift_detector.py",
       "source_location": "L43",
-      "community": 5,
+      "community": 6,
       "norm_label": "embed text into a 384-dimensional vector.",
       "id": "drift_detector_rationale_43"
     },
@@ -1208,7 +1379,7 @@
       "file_type": "rationale",
       "source_file": "backend/drift_detector.py",
       "source_location": "L50",
-      "community": 5,
+      "community": 6,
       "norm_label": "return cosine similarity in [0, 1] for two embedding vectors.",
       "id": "drift_detector_rationale_50"
     },
@@ -1217,7 +1388,7 @@
       "file_type": "rationale",
       "source_file": "backend/drift_detector.py",
       "source_location": "L67",
-      "community": 5,
+      "community": 6,
       "norm_label": "compare output_text to the baseline embedding for node_name.",
       "id": "drift_detector_rationale_67"
     },
@@ -1226,7 +1397,7 @@
       "file_type": "rationale",
       "source_file": "backend/drift_detector.py",
       "source_location": "L113",
-      "community": 5,
+      "community": 6,
       "norm_label": "store output_text embedding as a new baseline sample for node_name.",
       "id": "drift_detector_rationale_113"
     },
@@ -1235,7 +1406,7 @@
       "file_type": "rationale",
       "source_file": "backend/drift_detector.py",
       "source_location": "L131",
-      "community": 5,
+      "community": 6,
       "norm_label": "return process-wide drift detector with model loaded once.",
       "id": "drift_detector_rationale_131"
     },
@@ -1245,7 +1416,7 @@
       "source_file": "backend/__init__.py",
       "source_location": "L1",
       "id": "backend_init_py",
-      "community": 20,
+      "community": 21,
       "norm_label": "__init__.py"
     },
     {
@@ -1254,7 +1425,7 @@
       "source_file": "backend/replay_engine.py",
       "source_location": "L1",
       "id": "backend_replay_engine_py",
-      "community": 4,
+      "community": 0,
       "norm_label": "replay_engine.py"
     },
     {
@@ -1263,7 +1434,7 @@
       "source_file": "backend/replay_engine.py",
       "source_location": "L12",
       "id": "replay_engine_segmenttreenode",
-      "community": 4,
+      "community": 0,
       "norm_label": "segmenttreenode"
     },
     {
@@ -1272,7 +1443,7 @@
       "source_file": "backend/replay_engine.py",
       "source_location": "L21",
       "id": "replay_engine_persistentsegmenttree",
-      "community": 4,
+      "community": 0,
       "norm_label": "persistentsegmenttree"
     },
     {
@@ -1281,7 +1452,7 @@
       "source_file": "backend/replay_engine.py",
       "source_location": "L24",
       "id": "replay_engine_persistentsegmenttree_init",
-      "community": 4,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1290,7 +1461,7 @@
       "source_file": "backend/replay_engine.py",
       "source_location": "L28",
       "id": "replay_engine_persistentsegmenttree_insert",
-      "community": 4,
+      "community": 0,
       "norm_label": ".insert()"
     },
     {
@@ -1299,7 +1470,7 @@
       "source_file": "backend/replay_engine.py",
       "source_location": "L34",
       "id": "replay_engine_persistentsegmenttree_query",
-      "community": 4,
+      "community": 0,
       "norm_label": ".query()"
     },
     {
@@ -1308,7 +1479,7 @@
       "source_file": "backend/replay_engine.py",
       "source_location": "L40",
       "id": "replay_engine_persistentsegmenttree_get_state_at",
-      "community": 4,
+      "community": 0,
       "norm_label": ".get_state_at()"
     },
     {
@@ -1317,7 +1488,7 @@
       "source_file": "backend/replay_engine.py",
       "source_location": "L111",
       "id": "replay_engine_persistentsegmenttree_newest_checkpoint",
-      "community": 4,
+      "community": 0,
       "norm_label": "._newest_checkpoint()"
     },
     {
@@ -1326,7 +1497,7 @@
       "source_file": "backend/replay_engine.py",
       "source_location": "L122",
       "id": "replay_engine_persistentsegmenttree_coerce_checkpoints",
-      "community": 4,
+      "community": 0,
       "norm_label": "._coerce_checkpoints()"
     },
     {
@@ -1334,7 +1505,7 @@
       "file_type": "rationale",
       "source_file": "backend/replay_engine.py",
       "source_location": "L1",
-      "community": 4,
+      "community": 0,
       "norm_label": "replay engine for o(log n) checkpoint lookup over a run timeline.",
       "id": "replay_engine_rationale_1"
     },
@@ -1343,7 +1514,7 @@
       "file_type": "rationale",
       "source_file": "backend/replay_engine.py",
       "source_location": "L13",
-      "community": 4,
+      "community": 0,
       "norm_label": "persistent segment tree node storing the newest checkpoint in its range.",
       "id": "replay_engine_rationale_13"
     },
@@ -1352,7 +1523,7 @@
       "file_type": "rationale",
       "source_file": "backend/replay_engine.py",
       "source_location": "L22",
-      "community": 4,
+      "community": 0,
       "norm_label": "persistent segment tree over nanosecond checkpoint timestamps.",
       "id": "replay_engine_rationale_22"
     },
@@ -1361,7 +1532,7 @@
       "file_type": "rationale",
       "source_file": "backend/replay_engine.py",
       "source_location": "L29",
-      "community": 4,
+      "community": 0,
       "norm_label": "insert a checkpoint in o(log u), where u is the timestamp range.",
       "id": "replay_engine_rationale_29"
     },
@@ -1370,7 +1541,7 @@
       "file_type": "rationale",
       "source_file": "backend/replay_engine.py",
       "source_location": "L35",
-      "community": 4,
+      "community": 0,
       "norm_label": "return the checkpoint at or immediately before timestamp_ns in o(log u).",
       "id": "replay_engine_rationale_35"
     },
@@ -1379,7 +1550,7 @@
       "file_type": "rationale",
       "source_file": "backend/replay_engine.py",
       "source_location": "L43",
-      "community": 4,
+      "community": 0,
       "norm_label": "reconstruct state at the nearest checkpoint at or before timestamp_ns.",
       "id": "replay_engine_rationale_43"
     },
@@ -1389,7 +1560,7 @@
       "source_file": "backend/supabase_client.py",
       "source_location": "L1",
       "id": "backend_supabase_client_py",
-      "community": 6,
+      "community": 0,
       "norm_label": "supabase_client.py"
     },
     {
@@ -1398,7 +1569,7 @@
       "source_file": "backend/supabase_client.py",
       "source_location": "L26",
       "id": "supabase_client_get_client",
-      "community": 6,
+      "community": 0,
       "norm_label": "_get_client()"
     },
     {
@@ -1407,7 +1578,7 @@
       "source_file": "backend/supabase_client.py",
       "source_location": "L38",
       "id": "supabase_client_ping",
-      "community": 6,
+      "community": 4,
       "norm_label": "ping()"
     },
     {
@@ -1416,7 +1587,7 @@
       "source_file": "backend/supabase_client.py",
       "source_location": "L51",
       "id": "supabase_client_insert_checkpoint",
-      "community": 6,
+      "community": 0,
       "norm_label": "insert_checkpoint()"
     },
     {
@@ -1425,7 +1596,7 @@
       "source_file": "backend/supabase_client.py",
       "source_location": "L72",
       "id": "supabase_client_get_checkpoints_for_run",
-      "community": 2,
+      "community": 0,
       "norm_label": "get_checkpoints_for_run()"
     },
     {
@@ -1434,7 +1605,7 @@
       "source_file": "backend/supabase_client.py",
       "source_location": "L89",
       "id": "supabase_client_get_checkpoints_in_range",
-      "community": 6,
+      "community": 0,
       "norm_label": "get_checkpoints_in_range()"
     },
     {
@@ -1443,7 +1614,7 @@
       "source_file": "backend/supabase_client.py",
       "source_location": "L113",
       "id": "supabase_client_get_all_runs",
-      "community": 6,
+      "community": 0,
       "norm_label": "get_all_runs()"
     },
     {
@@ -1452,7 +1623,7 @@
       "source_file": "backend/supabase_client.py",
       "source_location": "L151",
       "id": "supabase_client_insert_embedding",
-      "community": 6,
+      "community": 0,
       "norm_label": "insert_embedding()"
     },
     {
@@ -1461,7 +1632,7 @@
       "source_file": "backend/supabase_client.py",
       "source_location": "L168",
       "id": "supabase_client_insert_baseline_embedding",
-      "community": 6,
+      "community": 0,
       "norm_label": "insert_baseline_embedding()"
     },
     {
@@ -1470,7 +1641,7 @@
       "source_file": "backend/supabase_client.py",
       "source_location": "L185",
       "id": "supabase_client_update_checkpoint_drift",
-      "community": 6,
+      "community": 0,
       "norm_label": "update_checkpoint_drift()"
     },
     {
@@ -1479,7 +1650,7 @@
       "source_file": "backend/supabase_client.py",
       "source_location": "L210",
       "id": "supabase_client_get_baseline_embedding",
-      "community": 6,
+      "community": 0,
       "norm_label": "get_baseline_embedding()"
     },
     {
@@ -1487,7 +1658,7 @@
       "file_type": "rationale",
       "source_file": "backend/supabase_client.py",
       "source_location": "L1",
-      "community": 6,
+      "community": 0,
       "norm_label": "async supabase interface for timewarp checkpoint storage.  all public functions",
       "id": "supabase_client_rationale_1"
     },
@@ -1496,7 +1667,7 @@
       "file_type": "rationale",
       "source_file": "backend/supabase_client.py",
       "source_location": "L27",
-      "community": 6,
+      "community": 0,
       "norm_label": "lazy-init singleton supabase client.",
       "id": "supabase_client_rationale_27"
     },
@@ -1505,7 +1676,7 @@
       "file_type": "rationale",
       "source_file": "backend/supabase_client.py",
       "source_location": "L39",
-      "community": 6,
+      "community": 4,
       "norm_label": "test supabase connection. returns true if reachable.",
       "id": "supabase_client_rationale_39"
     },
@@ -1514,7 +1685,7 @@
       "file_type": "rationale",
       "source_file": "backend/supabase_client.py",
       "source_location": "L52",
-      "community": 6,
+      "community": 0,
       "norm_label": "insert a checkpoint row. returns the supabase-assigned uuid string.",
       "id": "supabase_client_rationale_52"
     },
@@ -1523,7 +1694,7 @@
       "file_type": "rationale",
       "source_file": "backend/supabase_client.py",
       "source_location": "L73",
-      "community": 2,
+      "community": 0,
       "norm_label": "all checkpoints for a run, ordered by timestamp_ns asc.",
       "id": "supabase_client_rationale_73"
     },
@@ -1532,7 +1703,7 @@
       "file_type": "rationale",
       "source_file": "backend/supabase_client.py",
       "source_location": "L92",
-      "community": 6,
+      "community": 0,
       "norm_label": "checkpoints in [start_ns, end_ns] range \u2014 used by the segment tree replay.",
       "id": "supabase_client_rationale_92"
     },
@@ -1541,7 +1712,7 @@
       "file_type": "rationale",
       "source_file": "backend/supabase_client.py",
       "source_location": "L114",
-      "community": 6,
+      "community": 0,
       "norm_label": "recent runs grouped by run_id with summary stats.",
       "id": "supabase_client_rationale_114"
     },
@@ -1550,7 +1721,7 @@
       "file_type": "rationale",
       "source_file": "backend/supabase_client.py",
       "source_location": "L152",
-      "community": 6,
+      "community": 0,
       "norm_label": "store a 384-dim embedding vector for drift detection (phase 2).",
       "id": "supabase_client_rationale_152"
     },
@@ -1559,7 +1730,7 @@
       "file_type": "rationale",
       "source_file": "backend/supabase_client.py",
       "source_location": "L169",
-      "community": 6,
+      "community": 0,
       "norm_label": "most recent baseline embedding for a node (phase 2).",
       "id": "supabase_client_rationale_169"
     },
@@ -1568,7 +1739,7 @@
       "file_type": "rationale",
       "source_file": "backend/supabase_client.py",
       "source_location": "L188",
-      "community": 6,
+      "community": 0,
       "norm_label": "persist drift score and anomaly flag onto an existing checkpoint row.",
       "id": "supabase_client_rationale_188"
     },
@@ -1577,7 +1748,7 @@
       "file_type": "rationale",
       "source_file": "backend/supabase_client.py",
       "source_location": "L211",
-      "community": 6,
+      "community": 0,
       "norm_label": "most recent baseline embedding for a node (phase 2).",
       "id": "supabase_client_rationale_211"
     },
@@ -1591,7 +1762,7 @@
       "author": null,
       "contributor": null,
       "id": "snapshot_engine_computedelta",
-      "community": 4,
+      "community": 0,
       "norm_label": "compute_delta"
     },
     {
@@ -1604,7 +1775,7 @@
       "author": null,
       "contributor": null,
       "id": "snapshot_engine_computehash",
-      "community": 4,
+      "community": 0,
       "norm_label": "compute_hash"
     },
     {
@@ -1617,7 +1788,7 @@
       "author": null,
       "contributor": null,
       "id": "snapshot_engine_reconstructstate",
-      "community": 4,
+      "community": 0,
       "norm_label": "reconstruct_state"
     },
     {
@@ -1630,7 +1801,7 @@
       "author": null,
       "contributor": null,
       "id": "snapshot_engine_snapshotnodeexecution",
-      "community": 4,
+      "community": 0,
       "norm_label": "snapshot_node_execution"
     },
     {
@@ -1643,7 +1814,7 @@
       "author": null,
       "contributor": null,
       "id": "snapshot_engine_deltachainpattern",
-      "community": 4,
+      "community": 0,
       "norm_label": "git-style delta chain pattern"
     },
     {
@@ -1652,7 +1823,7 @@
       "source_file": "backend/main.py",
       "source_location": "L1",
       "id": "backend_main_py",
-      "community": 2,
+      "community": 4,
       "norm_label": "main.py"
     },
     {
@@ -1661,7 +1832,7 @@
       "source_file": "backend/main.py",
       "source_location": "L46",
       "id": "main_lifespan",
-      "community": 6,
+      "community": 4,
       "norm_label": "lifespan()"
     },
     {
@@ -1670,7 +1841,7 @@
       "source_file": "backend/main.py",
       "source_location": "L78",
       "id": "main_get_checkpoints",
-      "community": 2,
+      "community": 4,
       "norm_label": "get_checkpoints()"
     },
     {
@@ -1679,7 +1850,7 @@
       "source_file": "backend/main.py",
       "source_location": "L88",
       "id": "main_replay_at_time",
-      "community": 4,
+      "community": 0,
       "norm_label": "replay_at_time()"
     },
     {
@@ -1688,7 +1859,7 @@
       "source_file": "backend/main.py",
       "source_location": "L123",
       "id": "main_get_anomaly_path",
-      "community": 2,
+      "community": 5,
       "norm_label": "get_anomaly_path()"
     },
     {
@@ -1697,7 +1868,7 @@
       "source_file": "backend/main.py",
       "source_location": "L148",
       "id": "main_create_branch",
-      "community": 2,
+      "community": 4,
       "norm_label": "create_branch()"
     },
     {
@@ -1706,7 +1877,7 @@
       "source_file": "backend/main.py",
       "source_location": "L173",
       "id": "main_list_runs",
-      "community": 6,
+      "community": 4,
       "norm_label": "list_runs()"
     },
     {
@@ -1715,7 +1886,7 @@
       "source_file": "backend/main.py",
       "source_location": "L183",
       "id": "main_start_run",
-      "community": 2,
+      "community": 4,
       "norm_label": "start_run()"
     },
     {
@@ -1724,7 +1895,7 @@
       "source_file": "backend/main.py",
       "source_location": "L196",
       "id": "main_websocket_endpoint",
-      "community": 8,
+      "community": 4,
       "norm_label": "websocket_endpoint()"
     },
     {
@@ -1732,7 +1903,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L1",
-      "community": 2,
+      "community": 4,
       "norm_label": "timewarp fastapi application \u2014 rest endpoints + websocket live stream.  rest api",
       "id": "main_rationale_1"
     },
@@ -1741,7 +1912,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L47",
-      "community": 2,
+      "community": 4,
       "norm_label": "startup: verify supabase is reachable.",
       "id": "main_rationale_47"
     },
@@ -1750,7 +1921,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L79",
-      "community": 2,
+      "community": 4,
       "norm_label": "return every checkpoint for run_id, ordered by timestamp_ns asc.",
       "id": "main_rationale_79"
     },
@@ -1759,7 +1930,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L89",
-      "community": 2,
+      "community": 0,
       "norm_label": "reconstruct the full agent state at any historical timestamp.",
       "id": "main_rationale_89"
     },
@@ -1768,7 +1939,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L124",
-      "community": 2,
+      "community": 5,
       "norm_label": "return the bellman-ford anomaly path for run_id.",
       "id": "main_rationale_124"
     },
@@ -1777,7 +1948,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L149",
-      "community": 2,
+      "community": 4,
       "norm_label": "start a new agent run branching from from_timestamp_ns with new_prompt injected.",
       "id": "main_rationale_149"
     },
@@ -1786,7 +1957,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L174",
-      "community": 2,
+      "community": 4,
       "norm_label": "return all runs with summary stats (node count, anomaly flag, timestamps).",
       "id": "main_rationale_174"
     },
@@ -1795,7 +1966,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L184",
-      "community": 2,
+      "community": 4,
       "norm_label": "kick off the demo agent. returns run_id immediately; agent runs in background.",
       "id": "main_rationale_184"
     },
@@ -1804,7 +1975,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L197",
-      "community": 2,
+      "community": 4,
       "norm_label": "real-time checkpoint stream - connect once, receive all events.",
       "id": "main_rationale_197"
     },
@@ -1823,7 +1994,7 @@
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L16",
       "id": "anomaly_graph_behaviordag",
-      "community": 2,
+      "community": 5,
       "norm_label": "behaviordag"
     },
     {
@@ -1832,7 +2003,7 @@
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L19",
       "id": "anomaly_graph_behaviordag_init",
-      "community": 2,
+      "community": 5,
       "norm_label": ".__init__()"
     },
     {
@@ -1841,7 +2012,7 @@
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L29",
       "id": "anomaly_graph_behaviordag_add_node",
-      "community": 2,
+      "community": 5,
       "norm_label": ".add_node()"
     },
     {
@@ -1850,7 +2021,7 @@
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L48",
       "id": "anomaly_graph_behaviordag_bellman_ford_earliest_divergence",
-      "community": 2,
+      "community": 5,
       "norm_label": ".bellman_ford_earliest_divergence()"
     },
     {
@@ -1859,7 +2030,7 @@
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L87",
       "id": "anomaly_graph_behaviordag_get_anomaly_path",
-      "community": 2,
+      "community": 5,
       "norm_label": ".get_anomaly_path()"
     },
     {
@@ -1868,7 +2039,7 @@
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L107",
       "id": "anomaly_graph_behaviordag_get_node_names",
-      "community": 2,
+      "community": 5,
       "norm_label": ".get_node_names()"
     },
     {
@@ -1877,7 +2048,7 @@
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L111",
       "id": "anomaly_graph_behaviordag_replace_edge",
-      "community": 2,
+      "community": 5,
       "norm_label": "._replace_edge()"
     },
     {
@@ -1903,7 +2074,7 @@
       "file_type": "rationale",
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L17",
-      "community": 2,
+      "community": 5,
       "norm_label": "directed behavior graph of checkpoint execution with drift-weighted edges.",
       "id": "anomaly_graph_rationale_17"
     },
@@ -1912,7 +2083,7 @@
       "file_type": "rationale",
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L30",
-      "community": 2,
+      "community": 5,
       "norm_label": "add a checkpoint node and parent edge weighted by divergence.",
       "id": "anomaly_graph_rationale_30"
     },
@@ -1921,7 +2092,7 @@
       "file_type": "rationale",
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L51",
-      "community": 2,
+      "community": 5,
       "norm_label": "return the maximum-divergence path from start_id to end_id.",
       "id": "anomaly_graph_rationale_51"
     },
@@ -1930,7 +2101,7 @@
       "file_type": "rationale",
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L88",
-      "community": 2,
+      "community": 5,
       "norm_label": "return checkpoint ids from run start to the earliest anomalous node.",
       "id": "anomaly_graph_rationale_88"
     },
@@ -1939,7 +2110,7 @@
       "file_type": "rationale",
       "source_file": "backend/anomaly_graph.py",
       "source_location": "L108",
-      "community": 2,
+      "community": 5,
       "norm_label": "return node names for a checkpoint id path.",
       "id": "anomaly_graph_rationale_108"
     },
@@ -1962,7 +2133,7 @@
       "author": null,
       "contributor": null,
       "id": "websocket_manager_websocketmanager",
-      "community": 1,
+      "community": 2,
       "norm_label": "websocketmanager"
     },
     {
@@ -1975,7 +2146,7 @@
       "author": null,
       "contributor": null,
       "id": "websocket_manager_broadcast",
-      "community": 21,
+      "community": 22,
       "norm_label": "broadcast"
     },
     {
@@ -1984,7 +2155,7 @@
       "source_file": "agent_demo/inject_failure.py",
       "source_location": "L1",
       "id": "agent_demo_inject_failure_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "inject_failure.py"
     },
     {
@@ -1993,7 +2164,7 @@
       "source_file": "agent_demo/inject_failure.py",
       "source_location": "L23",
       "id": "inject_failure_parse_args",
-      "community": 1,
+      "community": 2,
       "norm_label": "parse_args()"
     },
     {
@@ -2002,7 +2173,7 @@
       "source_file": "agent_demo/inject_failure.py",
       "source_location": "L41",
       "id": "inject_failure_main",
-      "community": 1,
+      "community": 2,
       "norm_label": "main()"
     },
     {
@@ -2010,7 +2181,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/inject_failure.py",
       "source_location": "L1",
-      "community": 1,
+      "community": 2,
       "norm_label": "cli entry point for running a poisoned timewarp demo agent execution.",
       "id": "inject_failure_rationale_1"
     },
@@ -2019,7 +2190,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/inject_failure.py",
       "source_location": "L24",
-      "community": 1,
+      "community": 2,
       "norm_label": "parse failure injection cli arguments.",
       "id": "inject_failure_rationale_24"
     },
@@ -2028,7 +2199,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/inject_failure.py",
       "source_location": "L42",
-      "community": 1,
+      "community": 2,
       "norm_label": "run a poisoned demo agent execution and persist checkpoints.",
       "id": "inject_failure_rationale_42"
     },
@@ -2038,7 +2209,7 @@
       "source_file": "agent_demo/__init__.py",
       "source_location": "L1",
       "id": "agent_demo_init_py",
-      "community": 22,
+      "community": 23,
       "norm_label": "__init__.py"
     },
     {
@@ -2047,7 +2218,7 @@
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L1",
       "id": "agent_demo_demo_agent_py",
-      "community": 1,
+      "community": 2,
       "norm_label": "demo_agent.py"
     },
     {
@@ -2056,7 +2227,7 @@
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L40",
       "id": "demo_agent_agentstate",
-      "community": 1,
+      "community": 2,
       "norm_label": "agentstate"
     },
     {
@@ -2065,7 +2236,7 @@
       "source_file": "",
       "source_location": "",
       "id": "typeddict",
-      "community": 1,
+      "community": 2,
       "norm_label": "typeddict"
     },
     {
@@ -2074,7 +2245,7 @@
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L60",
       "id": "demo_agent_call_claude",
-      "community": 1,
+      "community": 2,
       "norm_label": "_call_claude()"
     },
     {
@@ -2083,7 +2254,7 @@
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L72",
       "id": "demo_agent_prompt_for_node",
-      "community": 1,
+      "community": 2,
       "norm_label": "_prompt_for_node()"
     },
     {
@@ -2092,7 +2263,7 @@
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L83",
       "id": "demo_agent_plan_task",
-      "community": 1,
+      "community": 2,
       "norm_label": "plan_task()"
     },
     {
@@ -2101,7 +2272,7 @@
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L96",
       "id": "demo_agent_search_web",
-      "community": 1,
+      "community": 2,
       "norm_label": "search_web()"
     },
     {
@@ -2110,7 +2281,7 @@
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L110",
       "id": "demo_agent_analyze_results",
-      "community": 1,
+      "community": 2,
       "norm_label": "analyze_results()"
     },
     {
@@ -2119,7 +2290,7 @@
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L123",
       "id": "demo_agent_synthesize",
-      "community": 1,
+      "community": 2,
       "norm_label": "synthesize()"
     },
     {
@@ -2128,7 +2299,7 @@
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L137",
       "id": "demo_agent_format_output",
-      "community": 1,
+      "community": 2,
       "norm_label": "format_output()"
     },
     {
@@ -2137,7 +2308,7 @@
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L154",
       "id": "demo_agent_build_demo_graph",
-      "community": 1,
+      "community": 2,
       "norm_label": "build_demo_graph()"
     },
     {
@@ -2146,7 +2317,7 @@
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L176",
       "id": "demo_agent_run_demo_agent",
-      "community": 1,
+      "community": 2,
       "norm_label": "run_demo_agent()"
     },
     {
@@ -2154,7 +2325,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L1",
-      "community": 1,
+      "community": 2,
       "norm_label": "timewarp demo agent \u2014 a 5-node langgraph research pipeline.  each node is wrappe",
       "id": "demo_agent_rationale_1"
     },
@@ -2163,7 +2334,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L41",
-      "community": 1,
+      "community": 2,
       "norm_label": "full state carried through every node of the research pipeline.",
       "id": "demo_agent_rationale_41"
     },
@@ -2172,7 +2343,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L61",
-      "community": 1,
+      "community": 2,
       "norm_label": "synchronous claude haiku call - kept sync so we can asyncio.to_thread it.",
       "id": "demo_agent_rationale_61"
     },
@@ -2181,7 +2352,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L73",
-      "community": 1,
+      "community": 2,
       "norm_label": "return injected prompt only for the selected failure node.",
       "id": "demo_agent_rationale_73"
     },
@@ -2190,7 +2361,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L84",
-      "community": 1,
+      "community": 2,
       "norm_label": "node 1 - create a 3-step research plan for the task.",
       "id": "demo_agent_rationale_84"
     },
@@ -2199,7 +2370,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L97",
-      "community": 1,
+      "community": 2,
       "norm_label": "node 2 - simulated web search (hardcoded results to avoid external deps).",
       "id": "demo_agent_rationale_97"
     },
@@ -2208,7 +2379,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L111",
-      "community": 1,
+      "community": 2,
       "norm_label": "node 3 - analyze the search results and identify patterns.",
       "id": "demo_agent_rationale_111"
     },
@@ -2217,7 +2388,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L124",
-      "community": 1,
+      "community": 2,
       "norm_label": "node 4 - synthesize analysis into actionable insights.",
       "id": "demo_agent_rationale_124"
     },
@@ -2226,7 +2397,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L138",
-      "community": 1,
+      "community": 2,
       "norm_label": "node 5 - format the final output as a polished summary.",
       "id": "demo_agent_rationale_138"
     },
@@ -2235,7 +2406,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L155",
-      "community": 1,
+      "community": 2,
       "norm_label": "assemble the langgraph with all nodes wrapped by timewarp middleware.",
       "id": "demo_agent_rationale_155"
     },
@@ -2244,7 +2415,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L183",
-      "community": 1,
+      "community": 2,
       "norm_label": "run the demo agent. called by fastapi background tasks or directly.      args:",
       "id": "demo_agent_rationale_183"
     },
@@ -2257,7 +2428,7 @@
       "captured_at": null,
       "author": "Claude Sonnet 4.6",
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "timewarp project",
       "id": "readme_timewarp"
     },
@@ -2270,7 +2441,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "nytechweek hackathon 2026",
       "id": "readme_hackathon_context"
     },
@@ -2283,7 +2454,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "github copilot x azure hackathon",
       "id": "readme_github_copilot_azure_hackathon"
     },
@@ -2296,7 +2467,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "claude code agentic team hackathon",
       "id": "readme_claude_code_agentic_hackathon"
     },
@@ -2309,7 +2480,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "cognitiveos (alternative project)",
       "id": "readme_cognitiveos"
     },
@@ -2322,7 +2493,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "demo timing schedule",
       "id": "readme_demo_timing"
     },
@@ -2335,7 +2506,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "ai agent silent failure problem",
       "id": "strategy_target_problem"
     },
@@ -2348,7 +2519,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "reversible computation approach",
       "id": "strategy_reversible_computation"
     },
@@ -2361,7 +2532,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 23,
+      "community": 24,
       "norm_label": "primary persona: hackathon judge (microsoft pe)",
       "id": "strategy_persona_judge"
     },
@@ -2374,7 +2545,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 24,
+      "community": 25,
       "norm_label": "primary customer: ai platform engineers fortune 500",
       "id": "strategy_persona_customer"
     },
@@ -2387,7 +2558,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "eu ai act article 12 compliance",
       "id": "strategy_eu_ai_act"
     },
@@ -2400,7 +2571,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 25,
+      "community": 26,
       "norm_label": "track 1: hackathon win demo loop",
       "id": "strategy_track1_hackathon_win"
     },
@@ -2413,7 +2584,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "track 2: agent failure intelligence newsletter",
       "id": "strategy_track2_newsletter"
     },
@@ -2426,7 +2597,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 26,
+      "community": 27,
       "norm_label": "track 3: post-hackathon saas open source",
       "id": "strategy_track3_posthackathon"
     },
@@ -2439,7 +2610,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "competitive moat: reversible execution vs langsmith/langfuse",
       "id": "strategy_competitive_moat"
     },
@@ -2452,7 +2623,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "positioning: git for ai agents / rr for c programs",
       "id": "strategy_positioning"
     },
@@ -2465,7 +2636,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "backend subagent (python/fastapi/supabase)",
       "id": "agents_subagent_backend"
     },
@@ -2478,7 +2649,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "frontend subagent (three.js/d3/websocket)",
       "id": "agents_subagent_frontend"
     },
@@ -2491,7 +2662,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "demo subagent (agent_demo/ seed data)",
       "id": "agents_subagent_demo"
     },
@@ -2504,7 +2675,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 27,
+      "community": 28,
       "norm_label": "test subagent (tests/)",
       "id": "agents_subagent_test"
     },
@@ -2517,7 +2688,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "websocket message schema (frozen)",
       "id": "agents_websocket_schema"
     },
@@ -2530,7 +2701,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "rest api contract (frozen)",
       "id": "agents_rest_api_contract"
     },
@@ -2543,7 +2714,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "raunak choudhary (human partner)",
       "id": "agents_raunak_choudhary"
     },
@@ -2556,7 +2727,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "timewarp project identity",
       "id": "claude_project_identity"
     },
@@ -2569,7 +2740,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "system architecture overview",
       "id": "claude_architecture_overview"
     },
@@ -2582,7 +2753,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "data flow: langgraph to websocket to frontend",
       "id": "claude_data_flow"
     },
@@ -2595,7 +2766,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "algorithm: delta compression + checkpoint chain",
       "id": "claude_algo_delta_compression"
     },
@@ -2608,7 +2779,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "algorithm: persistent segment tree (replay engine)",
       "id": "claude_algo_segment_tree"
     },
@@ -2621,7 +2792,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "algorithm: bellman-ford on behavior dag",
       "id": "claude_algo_bellman_ford"
     },
@@ -2634,7 +2805,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "algorithm: transformer embedding drift detection",
       "id": "claude_algo_drift_detection"
     },
@@ -2647,7 +2818,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "tech: fastapi (python backend)",
       "id": "claude_tech_fastapi"
     },
@@ -2660,7 +2831,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "tech: langgraph (agent framework)",
       "id": "claude_tech_langgraph"
     },
@@ -2673,7 +2844,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "tech: supabase (postgresql + pgvector)",
       "id": "claude_tech_supabase"
     },
@@ -2686,7 +2857,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "tech: sentence-transformers all-minilm-l6-v2",
       "id": "claude_tech_sentence_transformers"
     },
@@ -2699,7 +2870,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "tech: three.js (3d visualization)",
       "id": "claude_tech_threejs"
     },
@@ -2712,7 +2883,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "tech: d3.js (time scrubber / charts)",
       "id": "claude_tech_d3"
     },
@@ -2725,7 +2896,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 12,
       "norm_label": "tech: azure container apps (deployment)",
       "id": "claude_tech_azure"
     },
@@ -2738,7 +2909,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "tech: claude sonnet 4.5 via anthropic sdk",
       "id": "claude_tech_anthropic_sdk"
     },
@@ -2751,7 +2922,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "file: backend/main.py (fastapi entrypoint)",
       "id": "claude_file_main_py"
     },
@@ -2764,7 +2935,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: backend/snapshot_engine.py",
       "id": "claude_file_snapshot_engine"
     },
@@ -2777,7 +2948,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: backend/replay_engine.py",
       "id": "claude_file_replay_engine"
     },
@@ -2790,7 +2961,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: backend/drift_detector.py",
       "id": "claude_file_drift_detector"
     },
@@ -2803,7 +2974,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: backend/anomaly_graph.py",
       "id": "claude_file_anomaly_graph"
     },
@@ -2816,7 +2987,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: backend/instrumentation.py",
       "id": "claude_file_instrumentation"
     },
@@ -2829,7 +3000,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: backend/models.py",
       "id": "claude_file_models"
     },
@@ -2842,7 +3013,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: backend/supabase_client.py",
       "id": "claude_file_supabase_client"
     },
@@ -2855,7 +3026,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: frontend/src/timeline.js",
       "id": "claude_file_timeline_js"
     },
@@ -2868,7 +3039,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: frontend/src/websocket.js",
       "id": "claude_file_websocket_js"
     },
@@ -2881,7 +3052,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 28,
+      "community": 29,
       "norm_label": "file: frontend/src/replay_controls.js",
       "id": "claude_file_replay_controls_js"
     },
@@ -2894,7 +3065,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "file: frontend/src/diff_view.js",
       "id": "claude_file_diff_view_js"
     },
@@ -2907,7 +3078,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: agent_demo/demo_agent.py",
       "id": "claude_file_demo_agent"
     },
@@ -2920,7 +3091,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: agent_demo/inject_failure.py",
       "id": "claude_file_inject_failure"
     },
@@ -2933,7 +3104,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "file: agent_demo/seed_data.py",
       "id": "claude_file_seed_data"
     },
@@ -2946,7 +3117,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "supabase schema (checkpoints, embeddings, baseline_embeddings)",
       "id": "claude_supabase_schema"
     },
@@ -2959,7 +3130,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "rationale: fastapi over flask (async + pydantic + cold start)",
       "id": "claude_rationale_fastapi_over_flask"
     },
@@ -2972,7 +3143,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "rationale: local sentence-transformers over openai embeddings",
       "id": "claude_rationale_local_embeddings"
     },
@@ -2985,7 +3156,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "rationale: three.js over d3 for 3d (webgl vs svg)",
       "id": "claude_rationale_threejs_over_d3"
     },
@@ -2998,7 +3169,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "rationale: supabase over raw postgresql (free tier + pgvector)",
       "id": "claude_rationale_supabase"
     },
@@ -3011,7 +3182,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "rationale: persistent segment tree over naive replay (o(log n))",
       "id": "claude_rationale_segment_tree"
     },
@@ -3024,7 +3195,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "rationale: bellman-ford over dijkstra (zero-weight edges + negative cycle detection)",
       "id": "claude_rationale_bellman_ford"
     },
@@ -3037,7 +3208,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "demo script: 3-minute judge presentation",
       "id": "claude_demo_script"
     },
@@ -3050,7 +3221,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 14,
       "norm_label": "phase 0: setup (30 min)",
       "id": "claude_phase0"
     },
@@ -3063,7 +3234,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "phase 1: snapshot engine + backend core (90 min)",
       "id": "claude_phase1"
     },
@@ -3076,7 +3247,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "phase 2: algorithms (60 min)",
       "id": "claude_phase2"
     },
@@ -3089,7 +3260,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "phase 3: 4d frontend visualization (60 min)",
       "id": "claude_phase3"
     },
@@ -3102,7 +3273,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 12,
       "norm_label": "phase 4: azure deploy + polish (30 min)",
       "id": "claude_phase4"
     },
@@ -3115,7 +3286,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "dependency: fastapi==0.115.0",
       "id": "req_fastapi"
     },
@@ -3128,7 +3299,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 29,
+      "community": 30,
       "norm_label": "dependency: uvicorn[standard]==0.31.0",
       "id": "req_uvicorn"
     },
@@ -3141,7 +3312,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 30,
+      "community": 31,
       "norm_label": "dependency: websockets==13.1",
       "id": "req_websockets"
     },
@@ -3154,7 +3325,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "dependency: supabase==2.9.0",
       "id": "req_supabase"
     },
@@ -3167,7 +3338,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "dependency: langgraph==0.2.50",
       "id": "req_langgraph"
     },
@@ -3180,7 +3351,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "dependency: anthropic==0.40.0",
       "id": "req_anthropic"
     },
@@ -3193,7 +3364,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "dependency: sentence-transformers==3.3.1",
       "id": "req_sentence_transformers"
     },
@@ -3206,7 +3377,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "dependency: torch==2.5.1",
       "id": "req_torch"
     },
@@ -3219,7 +3390,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 31,
+      "community": 32,
       "norm_label": "dependency: pydantic==2.10.0",
       "id": "req_pydantic"
     },
@@ -3232,7 +3403,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 32,
+      "community": 33,
       "norm_label": "dependency: pytest==8.3.3",
       "id": "req_pytest"
     },
@@ -3245,7 +3416,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "dependency: deepdiff==8.0.1",
       "id": "req_deepdiff"
     },
@@ -3258,7 +3429,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "dependency: numpy==2.1.3",
       "id": "req_numpy"
     },
@@ -3271,7 +3442,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 13,
+      "community": 14,
       "norm_label": "plan phase 0: environment setup tasks",
       "id": "plan_phase0_setup"
     },
@@ -3284,7 +3455,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "plan phase 1: backend core tasks",
       "id": "plan_phase1_backend"
     },
@@ -3297,7 +3468,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "plan phase 2: algorithm implementation tasks",
       "id": "plan_phase2_algorithms"
     },
@@ -3310,7 +3481,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "plan phase 3: frontend 4d visualization tasks",
       "id": "plan_phase3_frontend"
     },
@@ -3323,7 +3494,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 12,
       "norm_label": "plan phase 4: azure deploy + polish tasks",
       "id": "plan_phase4_deploy"
     },
@@ -3336,7 +3507,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "fallback plans (hardcoded anomaly / d3 2d / localhost / sqlite)",
       "id": "plan_fallback_plans"
     },
@@ -3349,7 +3520,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "pydantic models: checkpoint, statesnapshot, driftevent, branchrequest",
       "id": "plan_pydantic_models"
     },
@@ -3362,7 +3533,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "implementation: persistentsegmenttree class",
       "id": "plan_segment_tree_impl"
     },
@@ -3375,7 +3546,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "implementation: driftdetector class",
       "id": "plan_drift_detector_impl"
     },
@@ -3388,7 +3559,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "implementation: behaviordag class with bellman-ford",
       "id": "plan_behavior_dag_impl"
     },
@@ -3401,7 +3572,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "implementation: timewarpmiddleware class",
       "id": "plan_timewarp_middleware"
     },
@@ -3414,7 +3585,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 8,
       "norm_label": "implementation: websocketmanager class",
       "id": "plan_websocket_manager"
     },
@@ -3427,7 +3598,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "plan: three.js scene setup (camera, colors, node/edge functions)",
       "id": "plan_threejs_scene"
     },
@@ -3440,7 +3611,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 12,
       "norm_label": "plan: azure container apps deploy commands",
       "id": "plan_azure_deploy_commands"
     },
@@ -3453,7 +3624,7 @@
       "captured_at": null,
       "author": "Bennett",
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "bennett 1973: reversible computation (cited concept)",
       "id": "concept_bennett_1973"
     },
@@ -3466,7 +3637,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "mozilla rr: time-travel debugging (cited concept)",
       "id": "concept_mozilla_rr"
     },
@@ -3479,7 +3650,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "windbg ttd: time-travel debugging (cited concept)",
       "id": "concept_windbg_ttd"
     },
@@ -3492,7 +3663,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "langsmith (competitor: forward-only logging)",
       "id": "concept_langsmith"
     },
@@ -3505,7 +3676,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "langfuse (competitor: forward-only logging)",
       "id": "concept_langfuse"
     },
@@ -3514,7 +3685,7 @@
       "file_type": "rationale",
       "source_file": "tests/conftest.py",
       "source_location": "L1",
-      "community": 33,
+      "community": 34,
       "norm_label": "shared pytest fixtures for timewarp tests.",
       "id": "conftest_rationale_1"
     },
@@ -3523,7 +3694,7 @@
       "file_type": "rationale",
       "source_file": "tests/conftest.py",
       "source_location": "L10",
-      "community": 34,
+      "community": 35,
       "norm_label": "a fresh uuid for each test.",
       "id": "conftest_rationale_10"
     },
@@ -3532,7 +3703,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_snapshot_engine.py",
       "source_location": "L1",
-      "community": 35,
+      "community": 36,
       "norm_label": "tests for backend/snapshot_engine.py \u2014 phase 1 milestone gate.  key guarantee: c",
       "id": "test_snapshot_engine_rationale_1"
     },
@@ -3541,7 +3712,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_snapshot_engine.py",
       "source_location": "L20",
-      "community": 36,
+      "community": 37,
       "norm_label": "when prev_state is empty, delta stores the full initial state.",
       "id": "test_snapshot_engine_rationale_20"
     },
@@ -3550,7 +3721,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_snapshot_engine.py",
       "source_location": "L89",
-      "community": 37,
+      "community": 38,
       "norm_label": "core guarantee: reconstruct(checkpoints) == original state at each step.",
       "id": "test_snapshot_engine_rationale_89"
     },
@@ -3559,7 +3730,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_snapshot_engine.py",
       "source_location": "L101",
-      "community": 38,
+      "community": 39,
       "norm_label": "simulate 5 sequential state transitions and verify full reconstruction.",
       "id": "test_snapshot_engine_rationale_101"
     },
@@ -3568,7 +3739,7 @@
       "file_type": "rationale",
       "source_file": "tests/test_snapshot_engine.py",
       "source_location": "L121",
-      "community": 39,
+      "community": 40,
       "norm_label": "__full_state__ fallback also reconstructs correctly.",
       "id": "test_snapshot_engine_rationale_121"
     },
@@ -3577,7 +3748,7 @@
       "file_type": "rationale",
       "source_file": "backend/instrumentation.py",
       "source_location": "L26",
-      "community": 1,
+      "community": 2,
       "norm_label": "stateful middleware instance for one agent run.",
       "id": "instrumentation_rationale_26"
     },
@@ -3586,7 +3757,7 @@
       "file_type": "rationale",
       "source_file": "backend/instrumentation.py",
       "source_location": "L36",
-      "community": 1,
+      "community": 2,
       "norm_label": "return an async-wrapped version of node_fn with timewarp instrumentation.",
       "id": "instrumentation_rationale_36"
     },
@@ -3595,7 +3766,7 @@
       "file_type": "rationale",
       "source_file": "backend/models.py",
       "source_location": "L1",
-      "community": 40,
+      "community": 41,
       "norm_label": "timewarp pydantic data models \u2014 shared across backend, instrumentation, and test",
       "id": "models_rationale_1"
     },
@@ -3604,7 +3775,7 @@
       "file_type": "rationale",
       "source_file": "backend/models.py",
       "source_location": "L12",
-      "community": 41,
+      "community": 42,
       "norm_label": "a single snapshot of agent state at one node execution.",
       "id": "models_rationale_12"
     },
@@ -3613,7 +3784,7 @@
       "file_type": "rationale",
       "source_file": "backend/models.py",
       "source_location": "L28",
-      "community": 42,
+      "community": 43,
       "norm_label": "reconstructed agent state at a specific timestamp (returned by /replay/{ts}).",
       "id": "models_rationale_28"
     },
@@ -3622,7 +3793,7 @@
       "file_type": "rationale",
       "source_file": "backend/models.py",
       "source_location": "L37",
-      "community": 43,
+      "community": 44,
       "norm_label": "result of comparing an llm output against its baseline embedding.",
       "id": "models_rationale_37"
     },
@@ -3631,7 +3802,7 @@
       "file_type": "rationale",
       "source_file": "backend/models.py",
       "source_location": "L47",
-      "community": 44,
+      "community": 45,
       "norm_label": "request body for post /branch \u2014 create an alternate timeline.",
       "id": "models_rationale_47"
     },
@@ -3640,7 +3811,7 @@
       "file_type": "rationale",
       "source_file": "backend/models.py",
       "source_location": "L56",
-      "community": 45,
+      "community": 46,
       "norm_label": "frozen websocket message schema \u2014 do not change (agents.md).",
       "id": "models_rationale_56"
     },
@@ -3649,7 +3820,7 @@
       "file_type": "rationale",
       "source_file": "backend/snapshot_engine.py",
       "source_location": "L1",
-      "community": 4,
+      "community": 0,
       "norm_label": "timewarp snapshot engine \u2014 delta compression + git-style checkpoint chain.  algo",
       "id": "snapshot_engine_rationale_1"
     },
@@ -3658,7 +3829,7 @@
       "file_type": "rationale",
       "source_file": "backend/snapshot_engine.py",
       "source_location": "L29",
-      "community": 4,
+      "community": 0,
       "norm_label": "json diff between two states \u2014 only changed keys with {old, new} pairs.      fir",
       "id": "snapshot_engine_rationale_29"
     },
@@ -3667,7 +3838,7 @@
       "file_type": "rationale",
       "source_file": "backend/snapshot_engine.py",
       "source_location": "L51",
-      "community": 4,
+      "community": 0,
       "norm_label": "sha-256(serialised_delta + parent_hash) \u2014 chains checkpoints like git commits.",
       "id": "snapshot_engine_rationale_51"
     },
@@ -3676,7 +3847,7 @@
       "file_type": "rationale",
       "source_file": "backend/snapshot_engine.py",
       "source_location": "L57",
-      "community": 4,
+      "community": 0,
       "norm_label": "apply deltas in order from root to leaf. returns the final reconstructed state.",
       "id": "snapshot_engine_rationale_57"
     },
@@ -3685,7 +3856,7 @@
       "file_type": "rationale",
       "source_file": "backend/snapshot_engine.py",
       "source_location": "L94",
-      "community": 4,
+      "community": 0,
       "norm_label": "compute delta + hash, persist to supabase, return the saved checkpoint.      thi",
       "id": "snapshot_engine_rationale_94"
     },
@@ -3694,7 +3865,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L44",
-      "community": 2,
+      "community": 4,
       "norm_label": "startup: verify supabase is reachable.",
       "id": "main_rationale_44"
     },
@@ -3703,7 +3874,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L74",
-      "community": 2,
+      "community": 4,
       "norm_label": "return every checkpoint for run_id, ordered by timestamp_ns asc.",
       "id": "main_rationale_74"
     },
@@ -3712,7 +3883,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L84",
-      "community": 2,
+      "community": 4,
       "norm_label": "reconstruct the full agent state at any historical timestamp.",
       "id": "main_rationale_84"
     },
@@ -3721,7 +3892,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L109",
-      "community": 2,
+      "community": 4,
       "norm_label": "return the bellman-ford anomaly path. phase 2 \u2014 stub for phase 1.",
       "id": "main_rationale_109"
     },
@@ -3730,7 +3901,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L119",
-      "community": 2,
+      "community": 4,
       "norm_label": "start a new agent run branching from from_timestamp_ns with new_prompt injected.",
       "id": "main_rationale_119"
     },
@@ -3739,7 +3910,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L143",
-      "community": 2,
+      "community": 4,
       "norm_label": "return all runs with summary stats (node count, anomaly flag, timestamps).",
       "id": "main_rationale_143"
     },
@@ -3748,7 +3919,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L153",
-      "community": 2,
+      "community": 4,
       "norm_label": "kick off the demo agent. returns run_id immediately; agent runs in background.",
       "id": "main_rationale_153"
     },
@@ -3757,7 +3928,7 @@
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L166",
-      "community": 2,
+      "community": 4,
       "norm_label": "real-time checkpoint stream \u2014 connect once, receive all events.",
       "id": "main_rationale_166"
     },
@@ -3766,7 +3937,7 @@
       "file_type": "rationale",
       "source_file": "backend/websocket_manager.py",
       "source_location": "L1",
-      "community": 46,
+      "community": 47,
       "norm_label": "websocket connection manager \u2014 broadcasts checkpoint events to all connected cli",
       "id": "websocket_manager_rationale_1"
     },
@@ -3775,7 +3946,7 @@
       "file_type": "rationale",
       "source_file": "backend/websocket_manager.py",
       "source_location": "L13",
-      "community": 47,
+      "community": 48,
       "norm_label": "thread-safe (within asyncio) manager for active websocket connections.",
       "id": "websocket_manager_rationale_13"
     },
@@ -3784,7 +3955,7 @@
       "file_type": "rationale",
       "source_file": "backend/websocket_manager.py",
       "source_location": "L19",
-      "community": 48,
+      "community": 49,
       "norm_label": "accept and register a new websocket connection.",
       "id": "websocket_manager_rationale_19"
     },
@@ -3793,7 +3964,7 @@
       "file_type": "rationale",
       "source_file": "backend/websocket_manager.py",
       "source_location": "L27",
-      "community": 49,
+      "community": 50,
       "norm_label": "remove a disconnected websocket.",
       "id": "websocket_manager_rationale_27"
     },
@@ -3802,7 +3973,7 @@
       "file_type": "rationale",
       "source_file": "backend/websocket_manager.py",
       "source_location": "L35",
-      "community": 50,
+      "community": 51,
       "norm_label": "send a json message to all connected clients.          silently removes dead con",
       "id": "websocket_manager_rationale_35"
     },
@@ -3811,7 +3982,7 @@
       "file_type": "rationale",
       "source_file": "backend/websocket_manager.py",
       "source_location": "L51",
-      "community": 51,
+      "community": 52,
       "norm_label": "number of currently active websocket connections.",
       "id": "websocket_manager_rationale_51"
     },
@@ -3820,7 +3991,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L54",
-      "community": 1,
+      "community": 2,
       "norm_label": "synchronous claude haiku call \u2014 kept sync so we can asyncio.to_thread it.",
       "id": "demo_agent_rationale_54"
     },
@@ -3829,7 +4000,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L68",
-      "community": 1,
+      "community": 2,
       "norm_label": "node 1 \u2014 create a 3-step research plan for the task.",
       "id": "demo_agent_rationale_68"
     },
@@ -3838,7 +4009,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L80",
-      "community": 1,
+      "community": 2,
       "norm_label": "node 2 \u2014 simulated web search (hardcoded results to avoid external deps).",
       "id": "demo_agent_rationale_80"
     },
@@ -3847,7 +4018,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L94",
-      "community": 1,
+      "community": 2,
       "norm_label": "node 3 \u2014 analyze the search results and identify patterns.",
       "id": "demo_agent_rationale_94"
     },
@@ -3856,7 +4027,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L106",
-      "community": 1,
+      "community": 2,
       "norm_label": "node 4 \u2014 synthesize analysis into actionable insights.",
       "id": "demo_agent_rationale_106"
     },
@@ -3865,7 +4036,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L119",
-      "community": 1,
+      "community": 2,
       "norm_label": "node 5 \u2014 format the final output as a polished summary.",
       "id": "demo_agent_rationale_119"
     },
@@ -3874,7 +4045,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L135",
-      "community": 1,
+      "community": 2,
       "norm_label": "assemble the langgraph with all nodes wrapped by timewarp middleware.",
       "id": "demo_agent_rationale_135"
     },
@@ -3883,7 +4054,7 @@
       "file_type": "rationale",
       "source_file": "agent_demo/demo_agent.py",
       "source_location": "L162",
-      "community": 1,
+      "community": 2,
       "norm_label": "run the demo agent. called by fastapi background tasks or directly.      args:",
       "id": "demo_agent_rationale_162"
     }
@@ -3956,8 +4127,8 @@
       "source_file": "frontend/src/main.js",
       "source_location": "L184",
       "weight": 1.0,
-      "_src": "main_updatebranchbutton",
-      "_tgt": "replay_controls_shouldshowbranchbutton",
+      "_src": "replay_controls_shouldshowbranchbutton",
+      "_tgt": "main_updatebranchbutton",
       "source": "replay_controls_shouldshowbranchbutton",
       "target": "main_updatebranchbutton"
     },
@@ -4061,7 +4232,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "_src": "frontend_src_timeline_js",
       "_tgt": "timeline_normalizecheckpoint",
@@ -4073,7 +4244,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "_src": "frontend_src_timeline_js",
       "_tgt": "timeline_statusfromcheckpoint",
@@ -4085,7 +4256,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0,
       "_src": "frontend_src_timeline_js",
       "_tgt": "timeline_buildtimelinestate",
@@ -4097,7 +4268,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L52",
+      "source_location": "L53",
       "weight": 1.0,
       "_src": "frontend_src_timeline_js",
       "_tgt": "timeline_visiblecheckpointidsat",
@@ -4109,7 +4280,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L60",
+      "source_location": "L61",
       "weight": 1.0,
       "_src": "frontend_src_timeline_js",
       "_tgt": "timeline_formatrelativetime",
@@ -4121,7 +4292,43 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L68",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_src": "frontend_src_timeline_js",
+      "_tgt": "timeline_calculateboundednodelayout",
+      "source": "frontend_src_timeline_js",
+      "target": "timeline_calculateboundednodelayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_src": "frontend_src_timeline_js",
+      "_tgt": "timeline_getfitcamerapose",
+      "source": "frontend_src_timeline_js",
+      "target": "timeline_getfitcamerapose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_src": "frontend_src_timeline_js",
+      "_tgt": "timeline_getfocuscamerapose",
+      "source": "frontend_src_timeline_js",
+      "target": "timeline_getfocuscamerapose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L110",
       "weight": 1.0,
       "_src": "frontend_src_timeline_js",
       "_tgt": "timeline_timewarptimeline",
@@ -4133,7 +4340,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L276",
+      "source_location": "L640",
       "weight": 1.0,
       "_src": "frontend_src_timeline_js",
       "_tgt": "timeline_renderscrubber",
@@ -4145,7 +4352,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "_src": "timeline_normalizecheckpoint",
       "_tgt": "timeline_statusfromcheckpoint",
@@ -4157,7 +4364,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L120",
+      "source_location": "L178",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline_addnode",
       "_tgt": "timeline_normalizecheckpoint",
@@ -4169,7 +4376,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L110",
+      "source_location": "L166",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline_setcheckpoints",
       "_tgt": "timeline_buildtimelinestate",
@@ -4181,7 +4388,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L278",
+      "source_location": "L642",
       "weight": 1.0,
       "_src": "timeline_renderscrubber",
       "_tgt": "timeline_buildtimelinestate",
@@ -4196,8 +4403,8 @@
       "source_file": "frontend/src/main.js",
       "source_location": "L128",
       "weight": 1.0,
-      "_src": "main_loadrun",
-      "_tgt": "timeline_buildtimelinestate",
+      "_src": "timeline_buildtimelinestate",
+      "_tgt": "main_loadrun",
       "source": "timeline_buildtimelinestate",
       "target": "main_loadrun"
     },
@@ -4205,7 +4412,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L184",
+      "source_location": "L253",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline_rewindtotime",
       "_tgt": "timeline_visiblecheckpointidsat",
@@ -4220,16 +4427,76 @@
       "source_file": "frontend/src/main.js",
       "source_location": "L153",
       "weight": 1.0,
-      "_src": "main_selectcheckpoint",
-      "_tgt": "timeline_formatrelativetime",
+      "_src": "timeline_formatrelativetime",
+      "_tgt": "main_selectcheckpoint",
       "source": "timeline_formatrelativetime",
       "target": "main_selectcheckpoint"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L168",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_setcheckpoints",
+      "_tgt": "timeline_calculateboundednodelayout",
+      "source": "timeline_calculateboundednodelayout",
+      "target": "timeline_timewarptimeline_setcheckpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L189",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_addnode",
+      "_tgt": "timeline_calculateboundednodelayout",
+      "source": "timeline_calculateboundednodelayout",
+      "target": "timeline_timewarptimeline_addnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L347",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_relayoutnodes",
+      "_tgt": "timeline_calculateboundednodelayout",
+      "source": "timeline_calculateboundednodelayout",
+      "target": "timeline_timewarptimeline_relayoutnodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L308",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_fittorun",
+      "_tgt": "timeline_getfitcamerapose",
+      "source": "timeline_getfitcamerapose",
+      "target": "timeline_timewarptimeline_fittorun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L293",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_focusnode",
+      "_tgt": "timeline_getfocuscamerapose",
+      "source": "timeline_getfocuscamerapose",
+      "target": "timeline_timewarptimeline_focusnode",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L69",
+      "source_location": "L111",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_constructor",
@@ -4241,7 +4508,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L79",
+      "source_location": "L132",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_initscene",
@@ -4253,7 +4520,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L108",
+      "source_location": "L164",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_setcheckpoints",
@@ -4265,7 +4532,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L119",
+      "source_location": "L177",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_addnode",
@@ -4277,7 +4544,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L154",
+      "source_location": "L212",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_addedge",
@@ -4289,7 +4556,19 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L171",
+      "source_location": "L231",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_clearedges",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_clearedges",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L240",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_updatenodecolor",
@@ -4301,7 +4580,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L183",
+      "source_location": "L252",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_rewindtotime",
@@ -4313,7 +4592,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L198",
+      "source_location": "L268",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_highlightanomalypath",
@@ -4325,7 +4604,55 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L216",
+      "source_location": "L286",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_focusnode",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_focusnode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L300",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_exitfocus",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_exitfocus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L307",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_fittorun",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_fittorun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L311",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_setcamerapose",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_setcamerapose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L318",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_clear",
@@ -4337,7 +4664,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L231",
+      "source_location": "L335",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_rebuildedges",
@@ -4349,19 +4676,43 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L241",
+      "source_location": "L346",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
-      "_tgt": "timeline_timewarptimeline_stablejitter",
+      "_tgt": "timeline_timewarptimeline_relayoutnodes",
       "source": "timeline_timewarptimeline",
-      "target": "timeline_timewarptimeline_stablejitter",
+      "target": "timeline_timewarptimeline_relayoutnodes",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L249",
+      "source_location": "L362",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_showfocusonly",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_showfocusonly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L374",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_showfullrun",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_showfullrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L386",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_resize",
@@ -4373,7 +4724,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L260",
+      "source_location": "L397",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline",
       "_tgt": "timeline_timewarptimeline_animate",
@@ -4382,10 +4733,130 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L437",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_handlepointerdown",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_handlepointerdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L453",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_addsceneshell",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_addsceneshell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L471",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_addnodehalo",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_addnodehalo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L487",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_shownodechamber",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_shownodechamber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L530",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_createpanelsprite",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_createpanelsprite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L553",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_wrapcanvastext",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_wrapcanvastext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L573",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_clearnodechamber",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_clearnodechamber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L588",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_getdebugstate",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_getdebugstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L631",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline",
+      "_tgt": "timeline_timewarptimeline_publishdebugstate",
+      "source": "timeline_timewarptimeline",
+      "target": "timeline_timewarptimeline_publishdebugstate",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L105",
+      "source_location": "L155",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_initscene",
+      "_tgt": "timeline_timewarptimeline_addsceneshell",
+      "source": "timeline_timewarptimeline_initscene",
+      "target": "timeline_timewarptimeline_addsceneshell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L161",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline_initscene",
       "_tgt": "timeline_timewarptimeline_animate",
@@ -4400,8 +4871,8 @@
       "source_file": "frontend/src/main.js",
       "source_location": "L99",
       "weight": 1.0,
-      "_src": "main_bootstrap",
-      "_tgt": "timeline_timewarptimeline_initscene",
+      "_src": "timeline_timewarptimeline_initscene",
+      "_tgt": "main_bootstrap",
       "source": "timeline_timewarptimeline_initscene",
       "target": "main_bootstrap"
     },
@@ -4409,7 +4880,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L109",
+      "source_location": "L165",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline_setcheckpoints",
       "_tgt": "timeline_timewarptimeline_clear",
@@ -4421,7 +4892,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L113",
+      "source_location": "L170",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline_setcheckpoints",
       "_tgt": "timeline_timewarptimeline_rebuildedges",
@@ -4431,13 +4902,25 @@
     },
     {
       "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L171",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_setcheckpoints",
+      "_tgt": "timeline_timewarptimeline_fittorun",
+      "source": "timeline_timewarptimeline_setcheckpoints",
+      "target": "timeline_timewarptimeline_fittorun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "frontend/src/main.js",
       "source_location": "L130",
       "weight": 1.0,
-      "_src": "main_loadrun",
-      "_tgt": "timeline_timewarptimeline_setcheckpoints",
+      "_src": "timeline_timewarptimeline_setcheckpoints",
+      "_tgt": "main_loadrun",
       "source": "timeline_timewarptimeline_setcheckpoints",
       "target": "main_loadrun"
     },
@@ -4445,7 +4928,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L127",
+      "source_location": "L185",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline_addnode",
       "_tgt": "timeline_timewarptimeline_updatenodecolor",
@@ -4457,19 +4940,31 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L132",
+      "source_location": "L205",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline_addnode",
-      "_tgt": "timeline_timewarptimeline_stablejitter",
+      "_tgt": "timeline_timewarptimeline_addnodehalo",
       "source": "timeline_timewarptimeline_addnode",
-      "target": "timeline_timewarptimeline_stablejitter",
+      "target": "timeline_timewarptimeline_addnodehalo",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L149",
+      "source_location": "L206",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_addnode",
+      "_tgt": "timeline_timewarptimeline_relayoutnodes",
+      "source": "timeline_timewarptimeline_addnode",
+      "target": "timeline_timewarptimeline_relayoutnodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L207",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline_addnode",
       "_tgt": "timeline_timewarptimeline_rebuildedges",
@@ -4484,8 +4979,8 @@
       "source_file": "frontend/src/websocket.js",
       "source_location": "L13",
       "weight": 1.0,
-      "_src": "websocket_routecheckpointmessage",
-      "_tgt": "timeline_timewarptimeline_addnode",
+      "_src": "timeline_timewarptimeline_addnode",
+      "_tgt": "websocket_routecheckpointmessage",
       "source": "timeline_timewarptimeline_addnode",
       "target": "websocket_routecheckpointmessage"
     },
@@ -4493,11 +4988,35 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/timeline.js",
-      "source_location": "L237",
+      "source_location": "L342",
       "weight": 1.0,
       "_src": "timeline_timewarptimeline_rebuildedges",
       "_tgt": "timeline_timewarptimeline_addedge",
       "source": "timeline_timewarptimeline_addedge",
+      "target": "timeline_timewarptimeline_rebuildedges",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L237",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_clearedges",
+      "_tgt": "timeline_timewarptimeline_clear",
+      "source": "timeline_timewarptimeline_clearedges",
+      "target": "timeline_timewarptimeline_clear",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L339",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_rebuildedges",
+      "_tgt": "timeline_timewarptimeline_clearedges",
+      "source": "timeline_timewarptimeline_clearedges",
       "target": "timeline_timewarptimeline_rebuildedges",
       "confidence_score": 1.0
     },
@@ -4508,10 +5027,22 @@
       "source_file": "frontend/src/websocket.js",
       "source_location": "L15",
       "weight": 1.0,
-      "_src": "websocket_routecheckpointmessage",
-      "_tgt": "timeline_timewarptimeline_updatenodecolor",
+      "_src": "timeline_timewarptimeline_updatenodecolor",
+      "_tgt": "websocket_routecheckpointmessage",
       "source": "timeline_timewarptimeline_updatenodecolor",
       "target": "websocket_routecheckpointmessage"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L264",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_rewindtotime",
+      "_tgt": "timeline_timewarptimeline_focusnode",
+      "source": "timeline_timewarptimeline_rewindtotime",
+      "target": "timeline_timewarptimeline_focusnode",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -4520,8 +5051,8 @@
       "source_file": "frontend/src/main.js",
       "source_location": "L179",
       "weight": 1.0,
-      "_src": "main_updateanomalypath",
-      "_tgt": "timeline_timewarptimeline_highlightanomalypath",
+      "_src": "timeline_timewarptimeline_highlightanomalypath",
+      "_tgt": "main_updateanomalypath",
       "source": "timeline_timewarptimeline_highlightanomalypath",
       "target": "main_updateanomalypath"
     },
@@ -4532,10 +5063,166 @@
       "source_file": "frontend/src/websocket.js",
       "source_location": "L18",
       "weight": 1.0,
-      "_src": "websocket_routecheckpointmessage",
-      "_tgt": "timeline_timewarptimeline_highlightanomalypath",
+      "_src": "timeline_timewarptimeline_highlightanomalypath",
+      "_tgt": "websocket_routecheckpointmessage",
       "source": "timeline_timewarptimeline_highlightanomalypath",
       "target": "websocket_routecheckpointmessage"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L293",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_focusnode",
+      "_tgt": "timeline_timewarptimeline_setcamerapose",
+      "source": "timeline_timewarptimeline_focusnode",
+      "target": "timeline_timewarptimeline_setcamerapose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L295",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_focusnode",
+      "_tgt": "timeline_timewarptimeline_showfocusonly",
+      "source": "timeline_timewarptimeline_focusnode",
+      "target": "timeline_timewarptimeline_showfocusonly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L296",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_focusnode",
+      "_tgt": "timeline_timewarptimeline_shownodechamber",
+      "source": "timeline_timewarptimeline_focusnode",
+      "target": "timeline_timewarptimeline_shownodechamber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L450",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_handlepointerdown",
+      "_tgt": "timeline_timewarptimeline_focusnode",
+      "source": "timeline_timewarptimeline_focusnode",
+      "target": "timeline_timewarptimeline_handlepointerdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L302",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_exitfocus",
+      "_tgt": "timeline_timewarptimeline_clearnodechamber",
+      "source": "timeline_timewarptimeline_exitfocus",
+      "target": "timeline_timewarptimeline_clearnodechamber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L303",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_exitfocus",
+      "_tgt": "timeline_timewarptimeline_showfullrun",
+      "source": "timeline_timewarptimeline_exitfocus",
+      "target": "timeline_timewarptimeline_showfullrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L304",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_exitfocus",
+      "_tgt": "timeline_timewarptimeline_fittorun",
+      "source": "timeline_timewarptimeline_exitfocus",
+      "target": "timeline_timewarptimeline_fittorun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L308",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_fittorun",
+      "_tgt": "timeline_timewarptimeline_setcamerapose",
+      "source": "timeline_timewarptimeline_fittorun",
+      "target": "timeline_timewarptimeline_setcamerapose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L323",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_clear",
+      "_tgt": "timeline_timewarptimeline_clearnodechamber",
+      "source": "timeline_timewarptimeline_clear",
+      "target": "timeline_timewarptimeline_clearnodechamber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L433",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_animate",
+      "_tgt": "timeline_timewarptimeline_publishdebugstate",
+      "source": "timeline_timewarptimeline_animate",
+      "target": "timeline_timewarptimeline_publishdebugstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L488",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_shownodechamber",
+      "_tgt": "timeline_timewarptimeline_clearnodechamber",
+      "source": "timeline_timewarptimeline_shownodechamber",
+      "target": "timeline_timewarptimeline_clearnodechamber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L545",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_createpanelsprite",
+      "_tgt": "timeline_timewarptimeline_wrapcanvastext",
+      "source": "timeline_timewarptimeline_createpanelsprite",
+      "target": "timeline_timewarptimeline_wrapcanvastext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/timeline.js",
+      "source_location": "L636",
+      "weight": 1.0,
+      "_src": "timeline_timewarptimeline_publishdebugstate",
+      "_tgt": "timeline_timewarptimeline_getdebugstate",
+      "source": "timeline_timewarptimeline_getdebugstate",
+      "target": "timeline_timewarptimeline_publishdebugstate",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -4544,8 +5231,8 @@
       "source_file": "frontend/src/main.js",
       "source_location": "L131",
       "weight": 1.0,
-      "_src": "main_loadrun",
-      "_tgt": "timeline_renderscrubber",
+      "_src": "timeline_renderscrubber",
+      "_tgt": "main_loadrun",
       "source": "timeline_renderscrubber",
       "target": "main_loadrun"
     },
@@ -4553,7 +5240,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L98",
+      "source_location": "L101",
       "weight": 1.0,
       "_src": "frontend_src_main_js",
       "_tgt": "main_bootstrap",
@@ -4565,7 +5252,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L104",
+      "source_location": "L107",
       "weight": 1.0,
       "_src": "frontend_src_main_js",
       "_tgt": "main_loadruns",
@@ -4577,7 +5264,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L124",
+      "source_location": "L127",
       "weight": 1.0,
       "_src": "frontend_src_main_js",
       "_tgt": "main_loadrun",
@@ -4589,7 +5276,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L145",
+      "source_location": "L148",
       "weight": 1.0,
       "_src": "frontend_src_main_js",
       "_tgt": "main_selectcheckpoint",
@@ -4601,7 +5288,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L160",
+      "source_location": "L163",
       "weight": 1.0,
       "_src": "frontend_src_main_js",
       "_tgt": "main_updatereplaystate",
@@ -4613,7 +5300,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L173",
+      "source_location": "L176",
       "weight": 1.0,
       "_src": "frontend_src_main_js",
       "_tgt": "main_updateanomalypath",
@@ -4625,7 +5312,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L183",
+      "source_location": "L186",
       "weight": 1.0,
       "_src": "frontend_src_main_js",
       "_tgt": "main_updatebranchbutton",
@@ -4637,7 +5324,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L101",
+      "source_location": "L104",
       "weight": 1.0,
       "_src": "main_bootstrap",
       "_tgt": "main_loadruns",
@@ -4661,7 +5348,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L121",
+      "source_location": "L124",
       "weight": 1.0,
       "_src": "main_loadruns",
       "_tgt": "main_loadrun",
@@ -4685,7 +5372,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L139",
+      "source_location": "L142",
       "weight": 1.0,
       "_src": "main_loadrun",
       "_tgt": "main_selectcheckpoint",
@@ -4697,7 +5384,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L140",
+      "source_location": "L143",
       "weight": 1.0,
       "_src": "main_loadrun",
       "_tgt": "main_updateanomalypath",
@@ -4709,7 +5396,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L142",
+      "source_location": "L145",
       "weight": 1.0,
       "_src": "main_loadrun",
       "_tgt": "main_updatebranchbutton",
@@ -4733,7 +5420,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.js",
-      "source_location": "L157",
+      "source_location": "L160",
       "weight": 1.0,
       "_src": "main_selectcheckpoint",
       "_tgt": "main_updatereplaystate",
@@ -4856,8 +5543,8 @@
       "source_file": "backend/main.py",
       "source_location": "L198",
       "weight": 1.0,
-      "_src": "main_websocket_endpoint",
-      "_tgt": "websocket_timewarpsocket_connect",
+      "_src": "websocket_timewarpsocket_connect",
+      "_tgt": "main_websocket_endpoint",
       "source": "websocket_timewarpsocket_connect",
       "target": "main_websocket_endpoint"
     },
@@ -4880,8 +5567,8 @@
       "source_file": "backend/main.py",
       "source_location": "L204",
       "weight": 1.0,
-      "_src": "main_websocket_endpoint",
-      "_tgt": "websocket_timewarpsocket_disconnect",
+      "_src": "websocket_timewarpsocket_disconnect",
+      "_tgt": "main_websocket_endpoint",
       "source": "websocket_timewarpsocket_disconnect",
       "target": "main_websocket_endpoint"
     },

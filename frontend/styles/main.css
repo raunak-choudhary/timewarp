@@ -1,10 +1,22 @@
 :root {
   color-scheme: dark;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #08110f;
-  color: #e8f4f1;
+  background: #07090a;
+  color: #edf7f5;
   font-synthesis: none;
   text-rendering: geometricPrecision;
+  --bg: #07090a;
+  --surface: #101416;
+  --surface-strong: #151b1e;
+  --border: #2a3738;
+  --border-bright: #476c67;
+  --text: #edf7f5;
+  --muted: #95aaa7;
+  --teal: #67dec7;
+  --teal-strong: #1b7464;
+  --amber: #efb04a;
+  --red: #df5b5b;
+  --blue: #5f9eea;
 }
 
 * {
@@ -16,7 +28,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden;
-  background: #08110f;
+  background: var(--bg);
 }
 
 button,
@@ -26,10 +38,23 @@ textarea {
 }
 
 button {
-  border: 1px solid #365f55;
-  background: #12221f;
-  color: #e8f4f1;
+  border: 1px solid var(--border-bright);
+  background: #121719;
+  color: var(--text);
   cursor: pointer;
+  transition:
+    border-color 140ms ease,
+    background 140ms ease,
+    transform 140ms ease;
+}
+
+button:hover:not(:disabled) {
+  border-color: var(--teal);
+  background: #182124;
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
 }
 
 button:disabled {
@@ -39,7 +64,7 @@ button:disabled {
 
 .app-shell {
   display: grid;
-  grid-template-rows: 72px minmax(0, 1fr) 132px;
+  grid-template-rows: minmax(64px, auto) minmax(360px, 1fr) minmax(104px, auto);
   height: 100vh;
 }
 
@@ -49,8 +74,9 @@ button:disabled {
   justify-content: space-between;
   gap: 20px;
   padding: 12px 18px;
-  border-bottom: 1px solid #1d3b35;
-  background: #0b1714;
+  border-bottom: 1px solid var(--border);
+  background: rgba(12, 16, 18, 0.96);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
 }
 
 .brand {
@@ -65,12 +91,14 @@ button:disabled {
   place-items: center;
   width: 44px;
   height: 44px;
-  border: 1px solid #50b99f;
+  border: 1px solid var(--teal);
   border-radius: 6px;
-  color: #71e0c4;
+  color: var(--teal);
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 0;
+  background: #0c1e1b;
+  box-shadow: inset 0 0 18px rgba(103, 222, 199, 0.12);
 }
 
 h1,
@@ -87,7 +115,7 @@ h1 {
 
 .brand p {
   margin-top: 4px;
-  color: #8db4aa;
+  color: var(--muted);
   font-size: 12px;
 }
 
@@ -102,17 +130,17 @@ h1 {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #95bdb2;
+  color: var(--muted);
   font-size: 12px;
 }
 
 select {
   width: min(36vw, 340px);
   height: 36px;
-  border: 1px solid #365f55;
+  border: 1px solid var(--border);
   border-radius: 6px;
-  background: #10201d;
-  color: #e8f4f1;
+  background: var(--surface);
+  color: var(--text);
   padding: 0 10px;
 }
 
@@ -131,13 +159,18 @@ select {
 }
 
 .command-button {
-  background: #1b5f51;
-  border-color: #2d8c78;
+  background: var(--teal-strong);
+  border-color: #339986;
+}
+
+.secondary-button {
+  background: var(--surface-strong);
+  border-color: var(--border-bright);
 }
 
 .danger-button {
-  background: #5d2222;
-  border-color: #aa4c4a;
+  background: #612629;
+  border-color: var(--red);
 }
 
 .workspace {
@@ -150,7 +183,7 @@ select {
   position: relative;
   min-width: 0;
   min-height: 0;
-  background: #08110f;
+  background: radial-gradient(circle at 50% 46%, #0e2521 0%, #091011 42%, #060708 100%);
 }
 
 .timeline-root,
@@ -172,23 +205,25 @@ select {
 
 .scene-overlay > div {
   padding: 10px 12px;
-  border: 1px solid #24473f;
+  border: 1px solid rgba(102, 137, 132, 0.42);
   border-radius: 6px;
-  background: rgba(8, 17, 15, 0.78);
+  background: rgba(12, 16, 18, 0.78);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(12px);
 }
 
 .metric-label {
   display: block;
   margin-bottom: 4px;
-  color: #7da99f;
+  color: var(--muted);
   font-size: 11px;
   text-transform: uppercase;
 }
 
 .details-panel {
   min-width: 0;
-  border-left: 1px solid #1d3b35;
-  background: #0d1816;
+  border-left: 1px solid var(--border);
+  background: var(--surface);
   padding: 16px;
   overflow: auto;
 }
@@ -215,7 +250,7 @@ select {
 }
 
 .checkpoint-details dt {
-  color: #84ada3;
+  color: var(--muted);
 }
 
 .checkpoint-details dd {
@@ -230,18 +265,18 @@ select {
   margin: 0;
   padding: 12px;
   overflow: auto;
-  border: 1px solid #24473f;
+  border: 1px solid var(--border);
   border-radius: 6px;
-  background: #07100e;
-  color: #cde8e1;
+  background: #080b0c;
+  color: #d9e9e6;
   font-size: 11px;
   line-height: 1.45;
 }
 
 .scrubber-area {
-  border-top: 1px solid #1d3b35;
-  background: #0b1714;
-  padding: 12px 18px 14px;
+  border-top: 1px solid var(--border);
+  background: #0b0f11;
+  padding: 10px 18px 12px;
 }
 
 .scrubber-row {
@@ -262,13 +297,13 @@ select {
 }
 
 .scrubber-track {
-  stroke: #3e7669;
+  stroke: #3b5452;
   stroke-width: 4;
   stroke-linecap: round;
 }
 
 .checkpoint-tick {
-  fill: #71e0c4;
+  fill: var(--teal);
 }
 
 .scrubber-handle {
@@ -278,20 +313,20 @@ select {
 }
 
 .time-label {
-  color: #cde8e1;
+  color: #d9e9e6;
   font-variant-numeric: tabular-nums;
   text-align: right;
 }
 
 .sparkline {
   width: 100%;
-  height: 52px;
+  height: 42px;
   margin-top: 4px;
 }
 
 .sparkline-path {
   fill: none;
-  stroke: #ef9f27;
+  stroke: var(--amber);
   stroke-width: 3;
 }
 
@@ -302,8 +337,8 @@ select {
   transform: translateX(100%);
   transition: transform 180ms ease;
   padding: 16px;
-  border-left: 1px solid #355e55;
-  background: #0d1816;
+  border-left: 1px solid var(--border-bright);
+  background: var(--surface);
   z-index: 5;
 }
 
@@ -322,17 +357,17 @@ select {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  color: #95bdb2;
+  color: var(--muted);
   font-size: 12px;
 }
 
 textarea {
   min-height: 100%;
   resize: none;
-  border: 1px solid #24473f;
+  border: 1px solid var(--border);
   border-radius: 6px;
-  background: #07100e;
-  color: #e8f4f1;
+  background: #080b0c;
+  color: var(--text);
   padding: 12px;
   line-height: 1.45;
 }
@@ -350,7 +385,7 @@ textarea {
   .app-shell {
     min-height: 100vh;
     height: auto;
-    grid-template-rows: auto 620px auto;
+    grid-template-rows: auto auto auto;
   }
 
   .topbar,
@@ -362,9 +397,14 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .scene-area {
+    height: min(70vh, 560px);
+    min-height: 380px;
+  }
+
   .details-panel {
     border-left: 0;
-    border-top: 1px solid #1d3b35;
+    border-top: 1px solid var(--border);
   }
 
   .scene-overlay {

@@ -4,6 +4,8 @@ import assert from "node:assert/strict";
 import {
   STATUS_COLORS,
   buildTimelineState,
+  calculateBoundedNodeLayout,
+  getFocusCameraPose,
   formatRelativeTime,
   visibleCheckpointIdsAt,
 } from "../src/timeline.js";
@@ -38,4 +40,30 @@ test("buildTimelineState sorts checkpoints and computes range", () => {
 
 test("formatRelativeTime renders milliseconds since run start", () => {
   assert.equal(formatRelativeTime(1_250_000_000, 1_000_000_000), "T+00:00.250");
+});
+
+test("calculateBoundedNodeLayout keeps long runs inside a fixed visual rail", () => {
+  const manyCheckpoints = Array.from({ length: 24 }, (_, index) => ({
+    checkpoint_id: `cp-${index}`,
+    id: `cp-${index}`,
+    timestamp_ns: 1_000 + index,
+    status: index === 12 ? "anomaly" : "success",
+  }));
+
+  const positions = calculateBoundedNodeLayout(manyCheckpoints);
+
+  assert.equal(positions.size, 24);
+  for (const position of positions.values()) {
+    assert.ok(Math.abs(position.x) <= 10);
+    assert.ok(Math.abs(position.y) <= 4);
+    assert.ok(Math.abs(position.z) <= 4);
+  }
+});
+
+test("getFocusCameraPose moves camera close to the selected node", () => {
+  const pose = getFocusCameraPose({ x: 2, y: 1, z: -1 });
+
+  assert.deepEqual(pose.target, { x: 2, y: 1, z: -1 });
+  assert.ok(pose.position.z > 6);
+  assert.ok(pose.position.y > 2);
 });
