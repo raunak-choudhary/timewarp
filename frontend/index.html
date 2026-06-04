@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeWarp</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">TW</div>
+          <div>
+            <h1>TimeWarp</h1>
+            <p>AI agent time-travel debugger</p>
+          </div>
+        </div>
+        <div class="toolbar">
+          <label class="field">
+            <span>Run</span>
+            <select id="run-selector" aria-label="Select run"></select>
+          </label>
+          <button id="refresh-runs" class="icon-button" title="Refresh runs" aria-label="Refresh runs">
+            R
+          </button>
+          <button id="start-run" class="command-button">Start Run</button>
+          <button id="inject-failure" class="danger-button">Inject Failure</button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="scene-area" aria-label="3D checkpoint timeline">
+          <div id="timeline-root" class="timeline-root"></div>
+          <div class="scene-overlay">
+            <div>
+              <span class="metric-label">Status</span>
+              <strong id="connection-status">Disconnected</strong>
+            </div>
+            <div>
+              <span class="metric-label">Current</span>
+              <strong id="current-node">No run selected</strong>
+            </div>
+            <div>
+              <span class="metric-label">Drift</span>
+              <strong id="current-drift">0.00</strong>
+            </div>
+          </div>
+        </section>
+
+        <aside class="details-panel">
+          <div class="panel-header">
+            <h2>Checkpoint</h2>
+            <button id="open-branch" class="icon-button" title="Create branch" aria-label="Create branch">B</button>
+          </div>
+          <dl class="checkpoint-details">
+            <dt>Run</dt>
+            <dd id="detail-run">-</dd>
+            <dt>Node</dt>
+            <dd id="detail-node">-</dd>
+            <dt>Time</dt>
+            <dd id="detail-time">-</dd>
+            <dt>Anomaly path</dt>
+            <dd id="detail-path">-</dd>
+          </dl>
+          <pre id="state-preview" class="state-preview">{}</pre>
+        </aside>
+      </main>
+
+      <footer class="scrubber-area">
+        <div class="scrubber-row">
+          <button id="play-pause" class="icon-button" title="Play or pause" aria-label="Play or pause">P</button>
+          <div id="scrubber" class="scrubber"></div>
+          <span id="time-label" class="time-label">T+00:00.000</span>
+        </div>
+        <svg id="drift-sparkline" class="sparkline" viewBox="0 0 600 52" role="img" aria-label="Drift score sparkline"></svg>
+      </footer>
+    </div>
+
+    <section id="diff-panel" class="diff-panel" aria-label="Branch diff panel" aria-hidden="true">
+      <div class="panel-header">
+        <h2>Branch Replay</h2>
+        <button id="close-diff" class="icon-button" title="Close" aria-label="Close diff panel">X</button>
+      </div>
+      <div class="diff-grid">
+        <label>
+          Original prompt
+          <textarea id="original-prompt" readonly></textarea>
+        </label>
+        <label>
+          Edited prompt
+          <textarea id="edited-prompt"></textarea>
+        </label>
+      </div>
+      <button id="replay-branch" class="command-button wide">Replay From Here</button>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

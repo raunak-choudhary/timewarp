@@ -259,6 +259,37 @@ poisoned run at `analyze_results`, non-empty `/anomaly/path`, and `18/18` tests 
 
 ---
 
+## Session 5 - Phase 3: Frontend 4D Visualization
+**Date:** June 4, 2026
+**Tool:** Codex (GPT-5)
+
+#### Prompt 5.1 - Phase 3 Implementation Start
+```
+Proceed to Phase 3
+```
+**AI Action:** Built the frontend demo layer with test-first coverage:
+- Added Node test runner coverage for timeline state, WebSocket routing, replay controls,
+  and branch payloads
+- Created `frontend/index.html` as the app shell
+- Created `frontend/src/timeline.js` with Three.js scene setup, checkpoint nodes, edges,
+  anomaly highlighting, D3 scrubber, and drift sparkline
+- Created `frontend/src/websocket.js` for `/ws/live` routing and reconnect behavior
+- Created `frontend/src/replay_controls.js` for rewind/playback state
+- Created `frontend/src/diff_view.js` for branch replay payloads
+- Created `frontend/src/main.js` to load runs, replay state, anomaly paths, and connect UI
+- Created `frontend/styles/main.css` for the dashboard layout
+- Installed frontend dependencies and generated `package-lock.json`
+
+**Bug found and fixed:** Vite production build rejected top-level `await`; startup was
+wrapped in `bootstrap()` with explicit error handling. Browser verification also revealed
+the scrubber only supported drag, so direct click-to-rewind support was added.
+
+**Verification:** `npm test` passed with `12/12` frontend tests, `npm run build` passed,
+and browser verification showed a live WebSocket connection, rendered Three.js canvas,
+D3 scrubber, anomaly path, and working rewind from `format_output` to `analyze_results`.
+
+---
+
 ## AI Assistance Summary
 
 ### By Phase
@@ -268,7 +299,7 @@ poisoned run at `analyze_results`, non-empty `/anomaly/path`, and `18/18` tests 
 | Phase 0 | 6 config/schema files | ~150 | .gitignore, requirements.txt, package.json, supabase_schema.sql, .env template, CLAUDE.md update |
 | Phase 1 | 13 Python files | ~1,073 | Complete backend stack from scratch |
 | Phase 2 | 7 algorithm/test files | ~700 est. | replay_engine, drift_detector, anomaly_graph, injection CLI, integration wiring |
-| Phase 3 | 5 frontend files (pending) | ~600 est. | Three.js 3D scene, D3 scrubber, WebSocket client |
+| Phase 3 | 10 frontend/test files | ~900 est. | Three.js timeline, D3 scrubber, WebSocket client, replay controls, branch panel |
 | Phase 4 | 1 deploy config (pending) | ~30 est. | azure-deploy.yml |
 
 ### AI Capabilities Demonstrated
