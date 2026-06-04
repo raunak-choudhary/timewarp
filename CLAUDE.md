@@ -466,3 +466,53 @@ At 3:30 PM, the judge sees:
 8. A clean 3-minute pitch that ends with the EU AI Act compliance hook
 
 That is the win.
+
+---
+
+## Codex Handoff
+
+**Last updated:** June 4, 2026 — after Phase 1 completion
+
+### Read Order for a Cold-Start Agent
+
+```
+1. CODEX_HANDOFF.md              ← start here — complete status, file tree, what to build
+2. CLAUDE.md                     ← this file — architecture, algorithms, demo script
+3. AGENTS.md                     ← frozen API + WebSocket contracts — DO NOT CHANGE
+4. graphify-out/GRAPH_REPORT.md  ← structural map of entire codebase (254 nodes, 398 edges)
+5. docs/plans/implementation-plan.md  ← exact Phase 2/3/4 tasks with code skeletons
+```
+
+### Phase Status
+
+| Phase | Status |
+|---|---|
+| Phase 0: Setup | ✅ Complete |
+| Phase 1: Backend Core | ✅ Complete — 5 checkpoints flowing, 13/13 tests pass |
+| Phase 2: Algorithms | ⏳ NOT STARTED — build replay_engine, drift_detector, anomaly_graph |
+| Phase 3: Frontend | ⏳ NOT STARTED — Three.js 3D, D3 scrubber, WebSocket client |
+| Phase 4: Azure Deploy | ⏳ BLOCKED — needs Azure account + az CLI |
+
+### Activate Environment
+
+```bash
+cd /Users/raunakchoudhary/Data/Projects/timewarp
+source venv/bin/activate
+python -c "import fastapi, supabase, sentence_transformers, langgraph; print('ok')"
+uvicorn backend.main:app --reload --port 8000
+```
+
+### Frozen Contracts (never change)
+
+- **WebSocket schema:** `AGENTS.md` → type/run_id/checkpoint_id/node_name/timestamp_ns/status/drift_score/is_anomaly/anomaly_path
+- **REST API:** GET /checkpoints, GET /replay/{ts}, GET /anomaly/path, POST /branch, GET /runs, POST /runs/start, WS /ws/live
+
+### Phase 2 Entry Point
+
+Build these three files, then wire into `backend/instrumentation.py`:
+- `backend/replay_engine.py` → PersistentSegmentTree (O(log n) queries)
+- `backend/drift_detector.py` → sentence-transformers cosine drift (load model at startup)
+- `backend/anomaly_graph.py` → BehaviorDAG + Bellman-Ford earliest divergence
+- `agent_demo/inject_failure.py` → poison prompt injection script
+
+**Do not start Phase 3 until:** `curl http://localhost:8000/anomaly/path?run_id=<uuid>` returns a non-empty path after failure injection.
