@@ -6,8 +6,8 @@
 # Claude local files
 .claude/
 
-# Knowledge graph output
-graphify-out/
+# Knowledge graph output — committed (updated after each phase)
+# graphify-out/
 
 # Python
 venv/
