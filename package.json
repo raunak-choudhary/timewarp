@@ -1,0 +1,16 @@
+{
+  "name": "timewarp-frontend",
+  "version": "1.0.0",
+  "description": "TimeWarp — AI Agent Time-Travel Debugger frontend",
+  "dependencies": {
+    "three": "^0.170.0",
+    "d3": "^7.9.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  },
+  "scripts": {
+    "dev": "npx vite frontend",
+    "build": "npx vite build frontend"
+  }
+}
