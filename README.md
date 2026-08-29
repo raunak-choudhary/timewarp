@@ -1,126 +1,183 @@
-# Hackathon 2026 — Project Files
+# TimeWarp
 
-**Date:** June 4, 2026 — NYTechWeek
-**Hackathons:** GitHub Copilot x Azure (9AM–5PM) + Claude Code Agentic Team (4:30–7:30PM)
+A time-travel debugger for AI agent pipelines. When a LangGraph agent runs, TimeWarp records
+every node execution as a checkpoint, detects where the agent's behaviour started diverging,
+and lets you rewind the run to any earlier moment, change the prompt at that point, and replay
+an alternate timeline from there.
 
----
+The idea comes from reversible computation and from time-travel debuggers for classical
+software such as Mozilla rr. Conventional agent observability tools are forward-only: they show
+you that something went wrong, but they cannot reconstruct the exact state at the moment it
+happened or let you re-run a corrected version from that point. TimeWarp is an attempt to bring
+that capability to agent systems.
 
-## Two Projects, One Decision Tomorrow
+Built in a single session at a NYC Tech Week hackathon run by the Claude Code team, June 2026.
 
-You have two complete project packages. Pick one at 11 AM team formation based on your team's
-strengths and gut feeling. Both are production-ready architectures.
-
-| | TimeWarp | CognitiveOS |
-|---|---|---|
-| Win probability | 85% | 78% |
-| Core wow factor | Time-travel debugger | 3D split-brain visualization |
-| Hardest part | Segment tree + 3D rewind | Three.js split-screen hemispheres |
-| Easiest fallback | 2D D3 graph instead of Three.js | Flat routing still demos fine |
-| Judge hook | "Git for AI agent decisions" | "AI that thinks like your team" |
-| Build risk | Low | Medium |
-
-**Recommendation: TimeWarp.** Higher win probability, cleaner build path, stronger fallbacks.
-But if you wake up tomorrow and CognitiveOS feels like the one — trust it.
-
----
-
-## Pre-Hackathon Checklist (Do These Tonight)
-
-- [ ] Create Supabase account at supabase.com (free tier, takes 2 minutes)
-- [ ] Note your `SUPABASE_URL` and `SUPABASE_KEY` somewhere accessible tomorrow
-- [ ] Create an Anthropic API key at console.anthropic.com (you likely have one)
-- [ ] Make sure your Azure account is active (use your NYU email if needed)
-- [ ] Install Python 3.11+ on your laptop
-- [ ] Install Node.js 20+ on your laptop
-- [ ] Charge your laptop to 100%
-- [ ] Download `sentence-transformers` model tonight (8s first load, bad during demo):
-      `python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"`
-
----
-
-## Day-Of Workflow (11:00 AM — 3:30 PM)
-
-### Step 1: Open Claude Desktop Code Tab
-Switch to the `</>Code` tab in Claude Desktop.
-
-### Step 2: Point at Your Project Folder
-Navigate to (or create) your chosen project folder:
-```
-cd ~/hackathon/timewarp
-# or
-cd ~/hackathon/cognitiveos
-```
-
-### Step 3: Install Plugins
-In the Claude Code session:
-```
-/plugin install superpowers@claude-plugins-official
-/plugin marketplace add EveryInc/compound-engineering-plugin
-/plugin install compound-engineering
-```
-
-### Step 4: The Magic
-Claude Code will read `CLAUDE.md`, `STRATEGY.md`, and `AGENTS.md` automatically.
-It already knows everything about your project. It already has the full implementation plan.
-
-Just say:
-```
-Let's start Phase 0. Read CLAUDE.md and begin setup.
-```
-
-And it will run.
-
----
-
-## File Structure
+## How it works
 
 ```
-hackathon-2026/
-├── README.md              ← This file
-├── timewarp/
-│   ├── CLAUDE.md          ← Primary project context (Claude Code reads this first)
-│   ├── STRATEGY.md        ← Product strategy (ce-strategy reads this)
-│   ├── AGENTS.md          ← Multi-agent coordination rules
-│   ├── .env.example       ← Copy to .env and fill values
-│   └── docs/
-│       └── plans/
-│           └── implementation-plan.md  ← Full 6-hour build plan
-└── cognitiveos/
-    ├── CLAUDE.md
-    ├── STRATEGY.md
-    ├── AGENTS.md
-    ├── .env.example
-    └── docs/
-        └── plans/
-            └── implementation-plan.md
+LangGraph agent node executes
+        |
+        v
+TimeWarp middleware intercepts entry and exit
+        |
+        v
+Snapshot engine computes a delta against the previous checkpoint, hashes it into the chain,
+and writes it to Supabase
+        |
+        +--> Drift detector embeds the node output and scores cosine distance from a baseline
+        |
+        +--> Behaviour DAG updates, with drift scores as edge weights
+        |
+        v
+WebSocket streams checkpoint events to the browser
+        |
+        v
+3D timeline renders each node in space, coloured by status
+        |
+        v
+Scrub the time slider, the replay engine queries the segment tree and reconstructs state at T
+        |
+        v
+Create a branch, edit the prompt, replay forward as a new timeline
 ```
 
----
+## The algorithms
 
-## Demo Timing (Both Projects)
+Four pieces do the real work, and they are the most interesting part of the project.
 
-| Time | Action |
+**Delta compression with a hash chain.** Agent state is never stored as a full copy. Each
+checkpoint holds only the diff against its parent, plus a hash chaining it to that parent, in
+the same spirit as Git commits. Reconstructing state at any point walks the chain from the root
+and applies each delta in order. `tests/test_snapshot_engine.py` asserts the property that
+matters here: the compression is lossless, so replaying the deltas reproduces the original
+state exactly at every step.
+
+**Persistent segment tree.** Rewinding by re-executing every checkpoint from the start would
+make the time slider unusable. The replay engine keeps a persistent segment tree over
+nanosecond timestamps, built from immutable nodes, so looking up the checkpoint at or before an
+arbitrary time T is a logarithmic descent rather than a linear scan. This is what makes
+scrubbing the timeline feel immediate.
+
+**Bellman-Ford over a behaviour DAG.** The run is modelled as a directed graph where each node
+is an agent step and each edge weight encodes how far the agent diverged across that step.
+Finding the path of greatest divergence means finding a longest path, which is done by negating
+the weights and running Bellman-Ford. Dijkstra cannot be used here, since it requires
+non-negative weights. The resulting path is what the interface highlights as the route the
+agent took into failure.
+
+**Semantic drift detection.** Each node output is embedded with `all-MiniLM-L6-v2` from
+sentence-transformers, running locally rather than through an API. Cosine similarity against a
+baseline embedding gives a drift score per node, and a score below the configured threshold
+raises a drift event. Those same scores become the edge weights the behaviour DAG runs
+Bellman-Ford over, so detection and root-cause analysis share one signal.
+
+## What is in the repository
+
+**Backend** (`backend/`, FastAPI)
+
+| File | Role |
 |---|---|
-| 11:00 AM | Hackathon starts. Team formation begins. |
-| 11:00–11:30 | Phase 0: Setup. First 30 minutes are pure environment. |
-| 11:30 AM–1:00 PM | Phase 1: Backend core. Most critical phase. |
-| 1:00–2:00 PM | Phase 2: Algorithms. The CS depth that impresses judges. |
-| 2:00–3:00 PM | Phase 3: Visualization. The demo wow factor. |
-| 3:00–3:25 PM | Phase 4: Azure deploy + rehearsal. |
-| 3:25 PM | Walk to demo area. Be early. |
-| 3:30 PM | Judge demo. 3 minutes. Own the room. |
+| `main.py` | FastAPI app, REST endpoints and the live WebSocket |
+| `instrumentation.py` | `TimeWarpMiddleware`, wraps any LangGraph node to capture entry and exit |
+| `snapshot_engine.py` | Delta computation, hash chaining, state reconstruction |
+| `replay_engine.py` | `PersistentSegmentTree` for time-indexed checkpoint lookup |
+| `drift_detector.py` | Sentence-transformer embeddings and cosine drift scoring |
+| `anomaly_graph.py` | `BehaviorDAG` and the Bellman-Ford divergence path |
+| `supabase_client.py` | Async checkpoint store, sync client wrapped off the event loop |
+| `websocket_manager.py` | Connection registry and broadcast |
+| `models.py` | Pydantic models for checkpoints, snapshots, drift events and branches |
 
----
+**Frontend** (`frontend/`, vanilla JS with Vite)
 
-## The One Thing
+| File | Role |
+|---|---|
+| `src/timeline.js` | Three.js 3D scene and D3 time scrubber |
+| `src/replay_controls.js` | Play, pause, rewind and branch controls |
+| `src/diff_view.js` | Side by side prompt diff when branching |
+| `src/websocket.js` | Live checkpoint stream from the backend |
+| `src/api.js` | REST client |
 
-Every team in that room will build a Copilot wrapper or a RAG chatbot.
+**Demo agent** (`agent_demo/`)
 
-You will be the only person who demos time-traveling through an AI agent's decision history,
-or shows a 3D brain network teaching AI to think like a human organization.
+A five node LangGraph research agent, `plan_task` through `format_output`, pre-wrapped with the
+TimeWarp middleware so every step is checkpointed. `inject_failure.py` injects a poison prompt
+at a chosen node so the drift detection and anomaly path can be demonstrated end to end.
 
-The idea is already won. Now it is about execution.
+## API
 
-Go build.
+| Method | Path | Purpose |
+|---|---|---|
+| GET | `/checkpoints` | All checkpoints for a run |
+| GET | `/replay/{timestamp_ns}` | Reconstructed state at time T |
+| GET | `/anomaly/path` | Bellman-Ford divergence path for a run |
+| POST | `/branch` | Create an alternate timeline with a modified prompt |
+| GET | `/runs` | List recent agent runs |
+| POST | `/runs/start` | Start a new demo agent run |
+| WS | `/ws/live` | Live checkpoint and drift event stream |
 
-— Generated by Claude Sonnet 4.6, June 3, 2026, 11:59 PM
+## Tech stack
+
+| Layer | Technology |
+|---|---|
+| Backend | Python 3.11+, FastAPI, Uvicorn, Pydantic v2 |
+| Agent framework | LangGraph |
+| LLM | Claude via the Anthropic SDK |
+| Embeddings | sentence-transformers, `all-MiniLM-L6-v2`, run locally |
+| Store | Supabase, PostgreSQL with pgvector |
+| Diffing | deepdiff |
+| 3D and charts | Three.js, D3 |
+| Frontend build | Vite, vanilla ES modules |
+| Tests | pytest and pytest-asyncio, node:test |
+
+## Running it
+
+Requires Python 3.11 or newer, Node 20 or newer, and a Supabase project.
+
+```bash
+git clone https://github.com/raunak-choudhary/timewarp.git
+cd timewarp
+
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+cp .env.example .env        # fill in Supabase and Anthropic values
+```
+
+Apply `supabase_schema.sql` in the Supabase SQL editor to create the `checkpoints`,
+`embeddings` and `baseline_embeddings` tables and enable pgvector.
+
+```bash
+uvicorn backend.main:app --reload --port 8000   # API on :8000
+npm install && npm run dev                      # frontend
+```
+
+Start a run, then inject a failure into it:
+
+```bash
+python -m agent_demo.demo_agent
+python -m agent_demo.inject_failure --inject_at_node analyze_results
+```
+
+`--inject_at_node` takes any node name from the demo graph, so the failure can be planted at
+whichever step makes the clearest demonstration.
+
+## Tests
+
+```bash
+pytest -q        # 18 backend tests
+npm test         # 14 frontend tests
+```
+
+Backend coverage focuses on the properties that are easy to get wrong: that delta compression
+round-trips losslessly, that the segment tree returns the correct checkpoint for an arbitrary
+timestamp, and that Bellman-Ford identifies the expected divergence path.
+
+## Author
+
+Raunak Choudhary
+
+NYU MS Computer Science, Class of 2026
+
+raunakchoudhary17@gmail.com

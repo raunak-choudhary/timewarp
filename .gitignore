@@ -3,13 +3,16 @@
 .env.*
 !.env.example
 
-# Claude local files
+# Internal planning and agent-context files, kept locally
 .claude/
-
-# Knowledge graph output — committed (updated after each phase)
-# graphify-out/
+AGENTS.md
+CLAUDE.md
+CODEX_HANDOFF.md
+STRATEGY.md
+docs/
 
 # Python
+.venv/
 venv/
 __pycache__/
 *.pyc
@@ -17,25 +20,18 @@ __pycache__/
 *.pyd
 .Python
 *.egg-info/
-dist/
-build/
 .pytest_cache/
 .mypy_cache/
 
-# sentence-transformers model cache (large — do not commit)
+# sentence-transformers model cache, large
 .cache/
 
 # Node
 node_modules/
 dist/
+build/
 .next/
 
 # OS
 .DS_Store
 Thumbs.db
-
-# Azure
-.azure/
-
-# AGENTS.md is gitignored per shared rules
-AGENTS.md
